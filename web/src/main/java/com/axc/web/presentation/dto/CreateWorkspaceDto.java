@@ -1,8 +1,12 @@
 package com.axc.web.presentation.dto;
 
 import com.axc.persistence.domain.Workspace;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-public class WorkspaceDto {
+@Getter
+@NoArgsConstructor
+public class CreateWorkspaceDto {
 
     public String industry;
 
@@ -10,7 +14,7 @@ public class WorkspaceDto {
 
     public UserDto owner;
 
-    public WorkspaceDto(Workspace workspace) {
+    public CreateWorkspaceDto(Workspace workspace) {
         industry = workspace.getIndustry();
         numberOfEmployees = workspace.getNumberOfEmployees();
         owner = new UserDto(workspace.getOwner());
