@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class CreateWorkspaceDto {
+    public Long id;
 
     public String industry;
 
@@ -15,6 +16,7 @@ public class CreateWorkspaceDto {
     public UserDto owner;
 
     public CreateWorkspaceDto(Workspace workspace) {
+        id = workspace.getId();
         industry = workspace.getIndustry();
         numberOfEmployees = workspace.getNumberOfEmployees();
         owner = new UserDto(workspace.getOwner());

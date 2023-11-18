@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserDto {
 
+    public Long id;
+
     public String firstName;
 
     public String lastName;
@@ -15,6 +17,7 @@ public class UserDto {
     public String email;
 
     public UserDto(User user) {
+        id = user.getId();
         firstName = user.getFirstName();
         lastName = user.getLastName();
         email = user.getEmail();

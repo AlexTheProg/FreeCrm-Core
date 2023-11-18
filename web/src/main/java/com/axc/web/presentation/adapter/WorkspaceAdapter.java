@@ -24,7 +24,6 @@ public class WorkspaceAdapter implements EntityDtoAdapter<Workspace, CreateWorks
 
         workspace.setIndustry(workspaceDto.industry);
         workspace.setNumberOfEmployees(workspaceDto.numberOfEmployees);
-        workspace.setOwner(userAdapter.mapDtoToEntity(workspaceDto.owner));
 
         return workspace;
     }

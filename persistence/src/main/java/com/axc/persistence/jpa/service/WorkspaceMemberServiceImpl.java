@@ -1,6 +1,7 @@
 package com.axc.persistence.jpa.service;
 
 import com.axc.persistence.domain.WorkspaceMember;
+import com.axc.persistence.jpa.BaseJpaRepository;
 import com.axc.persistence.jpa.repository.WorkspaceMemberRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ class WorkspaceMemberServiceImpl implements WorkspaceMemberService {
     }
 
     @Override
-    public WorkspaceMember saveOrUpdate(WorkspaceMember workspaceMember) {
-        return workspaceMemberRepository.save(workspaceMember);
+    public BaseJpaRepository<WorkspaceMember, Long> repository() {
+        return workspaceMemberRepository;
     }
 }

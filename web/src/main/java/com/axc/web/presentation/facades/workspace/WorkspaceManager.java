@@ -22,14 +22,20 @@ public class WorkspaceManager {
         this.userService = userService;
     }
 
+    /**
+     * Onboard a newly registered {@link User}, create a {@link Workspace} and register
+     * that user as a {@link WorkspaceMember}.
+     */
     public Workspace onboardOwnerInWorkspace(Workspace workspace, User owner) {
-        var savedWorkspace = workspaceService.saveOrUpdate(workspace);
-        var savedOwner = userService.saveOrUpdate(owner);
+        var savedOwner = userService.save(owner);
+
+        workspace.setOwner(savedOwner);
+        var savedWorkspace = workspaceService.save(workspace);
 
         var workspaceMember = new WorkspaceMember();
         workspaceMember.setWorkspace(savedWorkspace);
         workspaceMember.setMember(savedOwner);
-        workspaceMemberService.saveOrUpdate(workspaceMember);
+        workspaceMemberService.save(workspaceMember);
 
         return savedWorkspace;
     }

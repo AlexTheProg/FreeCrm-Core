@@ -1,7 +1,7 @@
 package com.axc.persistence.jpa.service;
 
 import com.axc.persistence.domain.Workspace;
+import com.axc.persistence.jpa.BaseJpaService;
 
-public interface WorkspaceService {
-    Workspace saveOrUpdate(Workspace workspace);
+public interface WorkspaceService extends BaseJpaService<Workspace, Long> {
 }

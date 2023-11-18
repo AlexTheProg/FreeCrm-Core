@@ -1,5 +1,6 @@
 package com.axc.web.presentation.controllers;
 
+import com.axc.web.presentation.adapter.UserAdapter;
 import com.axc.web.presentation.adapter.WorkspaceAdapter;
 import com.axc.web.presentation.dto.CreateWorkspaceDto;
 import com.axc.web.presentation.facades.workspace.WorkspaceManager;
@@ -22,17 +23,20 @@ public class OnboardController {
 
     private final WorkspaceAdapter workspaceAdapter;
     private final WorkspaceManager workspaceManager;
+    private final UserAdapter userAdapter;
 
     public OnboardController(WorkspaceAdapter workspaceAdapter,
-                             WorkspaceManager workspaceManager) {
+                             WorkspaceManager workspaceManager,
+                             UserAdapter userAdapter) {
         this.workspaceAdapter = workspaceAdapter;
         this.workspaceManager = workspaceManager;
+        this.userAdapter = userAdapter;
     }
 
     @PostMapping("/create")
-    public CreateWorkspaceDto onboardUserInWorkspace(@RequestBody @Valid CreateWorkspaceDto createWorkspaceDto) {
+    public CreateWorkspaceDto onboardOwnerInWorkspace(@RequestBody @Valid CreateWorkspaceDto createWorkspaceDto) {
         var workspace = workspaceAdapter.mapDtoToEntity(createWorkspaceDto);
-        var owner = workspace.getOwner();
+        var owner = userAdapter.mapDtoToEntity(createWorkspaceDto.owner);
 
         return workspaceAdapter.mapEntityToDto(workspaceManager.onboardOwnerInWorkspace(workspace, owner));
     }
