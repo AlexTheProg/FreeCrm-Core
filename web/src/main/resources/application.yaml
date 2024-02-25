@@ -2,3 +2,6 @@
 spring:
   config:
     import: 'classpath:persistence.yaml'
+  threads:
+    virtual:
+      enabled: true

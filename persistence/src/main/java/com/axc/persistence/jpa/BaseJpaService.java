@@ -49,6 +49,10 @@ public interface BaseJpaService<T extends Persistable<ID>, ID extends Serializab
         return repository().findAll(pageable);
     }
 
+    default List<T> findAll() {
+        return repository().findAll();
+    }
+
     @Transactional(readOnly = true)
     default T findById(final ID id) {
         return repository().findById(id)

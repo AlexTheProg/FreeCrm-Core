@@ -12,7 +12,6 @@
 
     <packaging>jar</packaging>
 
-    <groupId>com.axc</groupId>
     <artifactId>web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>web</name>
@@ -36,12 +35,6 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-testcontainers</artifactId>
             <scope>test</scope>
         </dependency>
@@ -52,10 +45,10 @@
             <scope>test</scope>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
