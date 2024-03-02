@@ -5,3 +5,8 @@ spring:
   threads:
     virtual:
       enabled: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://nkumdhunlgcvfnqpcgpj.supabase.co/auth/v1
