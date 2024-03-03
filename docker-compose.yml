@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15
-    container_name: postgres15
+    container_name: freecrm-postgres
     ports:
       - "5433:5432"
     environment:
@@ -12,6 +12,66 @@ services:
       POSTGRES_DB: free-crm
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
+  postgres-keycloak:
+    image: postgres:15.5-alpine
+    container_name: freecrm-postgres-keycloak
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: freecrm
+    stdin_open: true
+    tty: true
+    expose:
+      - 5432
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+
+  keycloak:
+    depends_on:
+      - postgres-keycloak
+    image: quay.io/keycloak/keycloak:21.1.2
+    container_name: freecrm-keycloak
+    restart: unless-stopped
+    ports:
+      - 8082:8080
+    expose:
+      - "8080"
+    environment:
+      KC_DB: postgres
+      KC_DB_URL_DATABASE: postgres
+      KC_DB_URL_HOST: postgres-keycloak
+      KC_DB_URL_PORT: 5432
+      KC_DB_USERNAME: admin
+      KC_DB_PASSWORD: admin
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HOSTNAME_URL: 'http://127.0.0.1'
+      KC_HOSTNAME:ADMIN_URL: 'http://127.0.0.1'
+      KC_LOG_LEVEL: INFO
+      VIRTUAL_PORT: 8080
+      JAVA_OPTS: -server -Xms512m -Xmx2048m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -XX:+UseAdaptiveSizePolicy -XX:MaxMetaspaceSize=512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true
+    command: [
+      "start",
+      "--proxy", "edge",
+      "--health-enabled=true",
+      "--spi-theme-static-max-page=-1",
+      "--spi-theme-cache-themes=false",
+      "--spi-theme-cache-templates=false"
+    ]
+
+  redis:
+    container_name: freecrm-redis
+    image: redis:alpine3.19
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    expose:
+      - "6379"
 
 volumes:
   postgres_data:

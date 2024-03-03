@@ -8,6 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 public interface UserService extends ReferenceJpaService<User, Long> {
 
+    User findByUsername(String username);
+    User findByEmail(String email);
+
     @Override
     @Transactional(readOnly = true)
     default User createReferenceForId(@Nullable Long id) {
