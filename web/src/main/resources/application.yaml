@@ -11,3 +11,7 @@ spring:
         jwt:
           issuer-uri: https://nkumdhunlgcvfnqpcgpj.supabase.co/auth/v1/callback
           jws-algorithms: HS256
+
+#------
+supabase:
+  secretKey: ${SECRET_KEY:}

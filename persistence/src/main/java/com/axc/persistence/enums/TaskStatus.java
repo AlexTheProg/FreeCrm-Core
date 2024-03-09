@@ -1,4 +1,8 @@
 package com.axc.persistence.enums;
 
-public class TaskStatus {
+public enum TaskStatus {
+    TODO,
+    IN_PROGRESS,
+    DONE,
+    CLOSED
 }

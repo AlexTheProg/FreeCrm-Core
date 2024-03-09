@@ -1,7 +1,10 @@
 package com.axc.web.config;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -63,8 +66,8 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    public JwtDecoder jwtDecoder() {
-        SecretKey secretKey = new SecretKeySpec("FKjaLc/68+xpTLI0fHY79Ib5i5ZH+5B2focQO3v5h+Dp9tXBHZlozi8RMPui71WL9t6vJX3453uWnlUTzKdJ3g==".getBytes(), "HS256");
+    public JwtDecoder jwtDecoder(SupabaseSecurity supabaseSecurity) {
+        SecretKey secretKey = new SecretKeySpec(supabaseSecurity.secretKey.getBytes(), "HS256");
         JwtDecoder jwtDecoder = NimbusJwtDecoder.withSecretKey(secretKey)
                 .build();
 
@@ -77,6 +80,18 @@ public class WebSecurityConfig {
     }
 
     private Customizer<OAuth2ResourceServerConfigurer<HttpSecurity>.JwtConfigurer> jwtConfigurer() {
-        return jwtConfigurer -> jwtConfigurer.decoder(jwtDecoder());
+        return jwtConfigurer -> jwtConfigurer.decoder(jwtDecoder(supabaseSecurity()));
+    }
+
+    @Bean
+    @ConfigurationProperties("supabase")
+    public SupabaseSecurity supabaseSecurity() {
+        return new SupabaseSecurity();
+    }
+
+    @Getter
+    @Setter
+    public static final class SupabaseSecurity {
+        private String secretKey;
     }
 }
