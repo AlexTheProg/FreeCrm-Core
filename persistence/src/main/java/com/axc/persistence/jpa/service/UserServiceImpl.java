@@ -19,4 +19,14 @@ class UserServiceImpl implements UserService {
     public BaseJpaRepository<User, Long> repository() {
         return userRepository;
     }
+
+    @Override
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+    @Override
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 }

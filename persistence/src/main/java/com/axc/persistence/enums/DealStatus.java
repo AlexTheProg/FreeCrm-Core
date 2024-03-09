@@ -1,4 +1,4 @@
 package com.axc.persistence.enums;
 
-public class DealStatus {
+public enum DealStatus {
 }

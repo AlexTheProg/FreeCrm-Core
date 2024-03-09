@@ -7,15 +7,15 @@ import com.axc.web.presentation.facades.workspace.WorkspaceManager;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "Onboarding", description = "Onboarding flow endpoints")
 @RestController
 @RequestMapping(value = OnboardController.API_URI)
+@ConditionalOnWebApplication
 @Validated
 @Slf4j
 public class OnboardController {
@@ -35,6 +35,7 @@ public class OnboardController {
 
     @PostMapping("/create")
     public CreateWorkspaceDto onboardOwnerInWorkspace(@RequestBody @Valid CreateWorkspaceDto createWorkspaceDto) {
+        var secContext = SecurityContextHolder.getContext();
         var workspace = workspaceAdapter.mapDtoToEntity(createWorkspaceDto);
         var owner = userAdapter.mapDtoToEntity(createWorkspaceDto.owner);
 

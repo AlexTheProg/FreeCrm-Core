@@ -2,10 +2,14 @@ package com.axc.persistence.domain;
 
 import com.axc.persistence.AuditedEntity;
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "workspace_members")
@@ -22,4 +26,9 @@ public class WorkspaceMember extends AuditedEntity {
     @JoinColumn(name = "workspace_id", nullable = false)
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private Workspace workspace;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "workspaceMember")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @Setter(AccessLevel.PROTECTED)
+    private Set<Task> tasks = new HashSet<>();
 }
