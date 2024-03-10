@@ -75,9 +75,16 @@
             <version>3.13.0</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.paulcwarren</groupId>
+            <artifactId>spring-content-fs-boot-starter</artifactId>
+            <version>3.0.9</version>
         </dependency>
     </dependencies>
     <build>

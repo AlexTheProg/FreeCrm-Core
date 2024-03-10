@@ -1,14 +1,14 @@
 package com.axc.persistence.domain;
 
 import com.axc.persistence.AuditedEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.SequenceGenerator;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -32,4 +32,10 @@ public class User extends AuditedEntity {
 
     @Column(name = "password", columnDefinition = "text")
     private String password;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    private Set<Role> roles = new HashSet<>();
 }

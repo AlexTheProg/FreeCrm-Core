@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,4 +32,32 @@ public class WorkspaceMember extends AuditedEntity {
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @Setter(AccessLevel.PROTECTED)
     private Set<Task> tasks = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @JoinTable(name = "workspace_member_files", joinColumns = @JoinColumn(name = "workspace_member_id"),
+        inverseJoinColumns = @JoinColumn(name = "document_id"))
+    private Set<Document> documents = new HashSet<>();
+
+    public void addTask(Task task) {
+        tasks.add(task);
+        task.setWorkspaceMember(this);
+    }
+
+    public void addAllTasks(Collection<Task> tasks) {
+        tasks.forEach(this::addTask);
+    }
+
+    public void removeTask(Task task) {
+        tasks.remove(task);
+        task.setWorkspaceMember(null);
+    }
+
+    public void addDocument(Document document) {
+        documents.add(document);
+    }
+
+    public void removeDocument(Document document) {
+        documents.remove(document);
+    }
 }
