@@ -44,8 +44,8 @@ public class WorkspaceMember extends AuditedEntity {
         task.setWorkspaceMember(this);
     }
 
-    public void addAllTasks(Collection<Task> tasks) {
-        tasks.forEach(this::addTask);
+    public void addAllTasks(Collection<Task> items) {
+        items.forEach(this::addTask);
     }
 
     public void removeTask(Task task) {
