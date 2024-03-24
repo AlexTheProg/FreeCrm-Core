@@ -2,9 +2,7 @@ package com.axc.persistence;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
 import lombok.Getter;
-import lombok.Setter;
 import org.springframework.data.domain.Persistable;
 
 import java.io.Serializable;

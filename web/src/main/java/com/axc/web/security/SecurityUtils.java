@@ -12,7 +12,7 @@ import java.util.Optional;
 public class SecurityUtils {
 
     /**
-     * Get the username of the current user.
+     * Get the email of the current user.
      * @return the username of the current user.
      */
     public static Optional<String> getCurrentUsername() {
@@ -22,7 +22,7 @@ public class SecurityUtils {
                 .map(authentication -> {
                     if (authentication.getPrincipal() instanceof final Jwt jwt) {
                         var userMetadataClaims = jwt.getClaimAsMap("user_metadata");
-                        return (String) userMetadataClaims.get("username");
+                        return (String) userMetadataClaims.get("email");
                     }
 
                     if (authentication.getPrincipal() instanceof final UserDetails springSecurityUser) {

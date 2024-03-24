@@ -1,12 +1,27 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5433/free-crm
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
   jpa:
+    properties:
+      hibernate:
+        connection:
+          handling_mode: DELAYED_ACQUISITION_AND_RELEASE_AFTER_TRANSACTION
     database: postgresql
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     generate-ddl: true
+
+
+master-datasource:
+  url: jdbc:postgresql://localhost:5432/free-crm
+  username: user
+  password: password
+  driver-class-name: org.postgresql.Driver
+  configuration:
+    pool-name: free-crm
+readonly-datasource:
+  url: jdbc:postgresql://localhost:5433/free-crm
+  username: replicator
+  password: replicator_password
+  driver-class-name: org.postgresql.Driver
+  configuration:
+    pool-name: free-crm
