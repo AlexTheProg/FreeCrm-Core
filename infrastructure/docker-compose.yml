@@ -40,19 +40,17 @@ services:
       PGPASSWORD: replicator_password
     command: |
       bash -c "
-      until pg_basebackup --pgdata=/var/lib/postgresql/data -R --slot=replication_slot --host=postgres_primary --port=5432
-      do
-      echo 'Waiting for primary to connect...'
-      sleep 2s
-      done
+      if [ -z \"\$(ls -A /var/lib/postgresql/data)\" ]; then
+      pg_basebackup --pgdata=/var/lib/postgresql/data -R --slot=replication_slot --host=postgres_primary --port=5432
       echo 'Backup done, starting replica...'
+      else
+      echo 'Data directory is not empty, skipping backup.'
+      fi
       chmod 0700 /var/lib/postgresql/data
       postgres
       "
     depends_on:
       - postgres_primary
-    volumes:
-      -
 
   redis:
     container_name: freecrm-redis

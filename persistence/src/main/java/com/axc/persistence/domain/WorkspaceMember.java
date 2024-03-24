@@ -39,6 +39,12 @@ public class WorkspaceMember extends AuditedEntity {
         inverseJoinColumns = @JoinColumn(name = "document_id"))
     private Set<Document> documents = new HashSet<>();
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @JoinTable(name = "workspace_member_deals", joinColumns = @JoinColumn(name = "workspace_member_id"),
+            inverseJoinColumns = @JoinColumn(name = "deal_id"))
+    private Set<Deal> deals = new HashSet<>();
+
     public void addTask(Task task) {
         tasks.add(task);
         task.setWorkspaceMember(this);
@@ -59,5 +65,19 @@ public class WorkspaceMember extends AuditedEntity {
 
     public void removeDocument(Document document) {
         documents.remove(document);
+    }
+
+    public void addDeal(Deal deal) {
+        deals.add(deal);
+        deal.setWorkspaceMember(this);
+    }
+
+    public void removeDeal(Deal deal) {
+        deals.remove(deal);
+        deal.setWorkspaceMember(null);
+    }
+
+    public void addAllDeals(Collection<Deal> items) {
+        items.forEach(this::addDeal);
     }
 }

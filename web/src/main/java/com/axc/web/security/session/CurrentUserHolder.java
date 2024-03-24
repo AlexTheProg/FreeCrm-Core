@@ -13,18 +13,18 @@ import org.springframework.security.access.AccessDeniedException;
 public class CurrentUserHolder {
     private final UserService userService;
 
-    public String getUsername() {
+    public String getEmail() {
         verifyAuthentication();
 
         return SecurityUtils.getCurrentUsername().orElseThrow();
     }
 
     public User get() {
-        final String username = getUsername();
+        final String email = getEmail();
 
-        var user = userService.findByUsername(username);
+        var user = userService.findByEmail(email);
         if (user == null) {
-            throw new NotFoundException(username + " not found");
+            throw new NotFoundException(email + " not found");
         }
 
         return user;
