@@ -9,7 +9,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://nkumdhunlgcvfnqpcgpj.supabase.co/auth/v1/callback
+          issuer-uri: ${ISSUER_URI:https://nkumdhunlgcvfnqpcgpj.supabase.co/auth/v1/callback}
           jws-algorithms: HS256
 
 supabase:

@@ -16,7 +16,7 @@ public class CurrentUserHolder {
     public String getEmail() {
         verifyAuthentication();
 
-        return SecurityUtils.getCurrentUsername().orElseThrow();
+        return SecurityUtils.getCurrentUserIdentifier().orElseThrow();
     }
 
     public User get() {

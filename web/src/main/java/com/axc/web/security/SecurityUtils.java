@@ -15,7 +15,7 @@ public class SecurityUtils {
      * Get the email of the current user.
      * @return the username of the current user.
      */
-    public static Optional<String> getCurrentUsername() {
+    public static Optional<String> getCurrentUserIdentifier() {
         var securityContext = SecurityContextHolder.getContext();
 
         return Optional.ofNullable(securityContext.getAuthentication())
