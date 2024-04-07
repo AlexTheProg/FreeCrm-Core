@@ -1,4 +1,4 @@
-package com.axc.persistence;
+package com.axc.persistence.config.replica;
 
 public enum DataSourceType {
     READ_WRITE,

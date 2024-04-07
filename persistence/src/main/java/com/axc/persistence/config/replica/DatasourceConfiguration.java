@@ -1,4 +1,4 @@
-package com.axc.persistence;
+package com.axc.persistence.config.replica;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;

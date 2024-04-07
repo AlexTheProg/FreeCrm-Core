@@ -3,6 +3,7 @@ package com.axc.web.config;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -33,6 +34,9 @@ public class WebSecurityConfig {
 
     @Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri}")
     private String issuerUri;
+
+    @Autowired
+    private TenantIdentifierResolver tenantIdentifierResolver;
 
     @Bean
     @Order(1)
@@ -68,15 +72,9 @@ public class WebSecurityConfig {
     @Bean
     public JwtDecoder jwtDecoder(SupabaseSecurity supabaseSecurity) {
         SecretKey secretKey = new SecretKeySpec(supabaseSecurity.secretKey.getBytes(), "HS256");
-        JwtDecoder jwtDecoder = NimbusJwtDecoder.withSecretKey(secretKey)
-                .build();
 
-        return token -> {
-            log.info("token: {}", token);
-            var jwt = jwtDecoder.decode(token);
-            log.info("decoded: {}", jwt.toString());
-            return jwt;
-        };
+        return NimbusJwtDecoder.withSecretKey(secretKey)
+                .build();
     }
 
     private Customizer<OAuth2ResourceServerConfigurer<HttpSecurity>.JwtConfigurer> jwtConfigurer() {

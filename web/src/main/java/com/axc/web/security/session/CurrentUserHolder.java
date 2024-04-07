@@ -4,14 +4,16 @@ import com.axc.persistence.domain.User;
 import com.axc.persistence.jpa.service.UserService;
 import com.axc.web.security.SecurityUtils;
 import jakarta.ws.rs.NotFoundException;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.security.access.AccessDeniedException;
 
 @Service
-@RequiredArgsConstructor
 public class CurrentUserHolder {
     private final UserService userService;
+
+    public CurrentUserHolder(UserService userService) {
+        this.userService = userService;
+    }
 
     public String getEmail() {
         verifyAuthentication();

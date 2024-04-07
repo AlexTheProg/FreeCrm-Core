@@ -3,6 +3,7 @@ package com.axc.persistence;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
+import org.hibernate.annotations.TenantId;
 import org.springframework.data.domain.Persistable;
 
 import java.io.Serializable;
@@ -16,6 +17,9 @@ public class BaseEntity implements Persistable<Long>, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "default_id_seq_gen")
     private Long id;
+
+    @TenantId
+    private String tenantId;
 
     protected void setId(Long id) {
         this.id = id;
