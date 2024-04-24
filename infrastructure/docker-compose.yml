@@ -14,7 +14,7 @@ services:
   postgres_primary:
     <<: *postgres-common
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       POSTGRES_USER: user
       POSTGRES_DB: free-crm
@@ -34,23 +34,25 @@ services:
   postgres_replica:
     <<: *postgres-common
     ports:
-      - "5433:5432"
+      - "5434:5432"
     environment:
       PGUSER: replicator
       PGPASSWORD: replicator_password
     command: |
       bash -c "
-      if [ -z \"\$(ls -A /var/lib/postgresql/data)\" ]; then
-      pg_basebackup --pgdata=/var/lib/postgresql/data -R --slot=replication_slot --host=postgres_primary --port=5432
+      until pg_basebackup --pgdata=/var/lib/postgresql/data -R --slot=replication_slot --host=postgres_primary --port=5432
+      do
+      echo 'Waiting for primary to connect...'
+      sleep 2s
+      done
       echo 'Backup done, starting replica...'
-      else
-      echo 'Data directory is not empty, skipping backup.'
-      fi
       chmod 0700 /var/lib/postgresql/data
       postgres
       "
     depends_on:
       - postgres_primary
+    volumes:
+      - ./backup-data-replica:/var/lib/postgresql/data
 
   redis:
     container_name: freecrm-redis

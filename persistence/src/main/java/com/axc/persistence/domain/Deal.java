@@ -32,6 +32,12 @@ public class Deal extends AuditedEntity {
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private WorkspaceMember workspaceMember;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @JoinColumn(name = "company_id", nullable = false)
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    private Company company;
+
+
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JoinTable(name = "deal_files", joinColumns = @JoinColumn(name = "deal_id"),
