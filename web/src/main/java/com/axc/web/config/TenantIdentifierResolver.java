@@ -1,6 +1,5 @@
 package com.axc.web.config;
 
-import com.axc.web.security.session.CurrentUserHolder;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.hibernate.cfg.AvailableSettings;

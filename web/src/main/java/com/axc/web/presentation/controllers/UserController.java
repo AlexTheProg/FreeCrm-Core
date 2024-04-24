@@ -1,7 +1,5 @@
 package com.axc.web.presentation.controllers;
 
-import com.axc.persistence.domain.User;
-import com.axc.persistence.domain.User_;
 import com.axc.persistence.jpa.service.UserService;
 import com.axc.persistence.jpa.service.WorkspaceService;
 import com.axc.web.presentation.adapter.UserAdapter;
@@ -10,8 +8,6 @@ import com.axc.web.presentation.facades.member.WorkspaceMemberManager;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
