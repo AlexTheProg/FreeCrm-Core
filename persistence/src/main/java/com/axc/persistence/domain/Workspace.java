@@ -22,8 +22,10 @@ import java.util.Set;
 @Setter
 public class Workspace extends AuditedEntity {
 
+    @Column(name = "industry", columnDefinition = "text")
     private String industry;
 
+    @Column(name = "number_of_employees", columnDefinition = "bigint")
     private Long numberOfEmployees;
 
     @OneToOne(fetch = FetchType.LAZY, optional = false)
@@ -37,6 +39,11 @@ public class Workspace extends AuditedEntity {
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @Setter(AccessLevel.PROTECTED)
     private Set<WorkspaceMember> members = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "workspace")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @Setter(AccessLevel.PROTECTED)
+    private Set<Lead> leads = new HashSet<>();
 
     public void addMember(WorkspaceMember member) {
         members.add(member);

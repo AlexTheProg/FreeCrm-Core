@@ -7,10 +7,10 @@ spring:
     database: postgresql
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     generate-ddl: true
   liquibase:
-    enabled: true
+    enabled: false
     change-log: "classpath:/db-changelog/changelog-master.xml"
 
 

@@ -2,10 +2,14 @@ package com.axc.persistence.domain;
 
 import com.axc.persistence.AuditedEntity;
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "branches")
@@ -27,4 +31,9 @@ public class Branch extends AuditedEntity {
     @JoinColumn(name = "company_id", nullable = false)
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private Company company;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "branch")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @Setter(AccessLevel.PRIVATE)
+    private Set<Deal> deals = new HashSet<>();
 }

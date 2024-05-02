@@ -1,9 +1,12 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
-    <changeSet author="alexa (generated)" id="1711312796931-1">
+    <changeSet author="alex.contu (generated)" id="1714654062942-1">
         <createTable tableName="deals">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="deals_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -12,15 +15,21 @@
             <column name="details" type="TEXT"/>
             <column name="name" type="TEXT"/>
             <column name="status" type="TEXT"/>
+            <column name="company_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
             <column name="workspace_member_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-2">
+    <changeSet author="alex.contu (generated)" id="1714654062942-2">
         <createTable tableName="leads">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="leads_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -30,12 +39,18 @@
             <column name="company_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
+            <column name="workspace_owner_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-3">
+    <changeSet author="alex.contu (generated)" id="1714654062942-3">
         <createTable tableName="tasks">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="tasks_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -52,7 +67,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-4">
+    <changeSet author="alex.contu (generated)" id="1714654062942-4">
         <createTable tableName="workspace_member_files">
             <column name="workspace_member_id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="workspace_member_files_pkey"/>
@@ -62,7 +77,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-5">
+    <changeSet author="alex.contu (generated)" id="1714654062942-5">
         <createTable tableName="deal_files">
             <column name="deal_id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="deal_files_pkey"/>
@@ -72,10 +87,13 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-6">
+    <changeSet author="alex.contu (generated)" id="1714654062942-6">
         <createTable tableName="documents">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="documents_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -88,7 +106,7 @@
             <column name="size" type="BIGINT"/>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-7">
+    <changeSet author="alex.contu (generated)" id="1714654062942-7">
         <createTable tableName="workspace_member_deals">
             <column name="workspace_member_id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="workspace_member_deals_pkey"/>
@@ -98,10 +116,13 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-8">
+    <changeSet author="alex.contu (generated)" id="1714654062942-8">
         <createTable tableName="roles">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="roles_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -112,55 +133,58 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-9">
+    <changeSet author="alex.contu (generated)" id="1714654062942-9">
         <addUniqueConstraint columnNames="company_id" constraintName="uk_b3advlyhdtxbwkhu297nc748j" tableName="leads"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-10">
+    <changeSet author="alex.contu (generated)" id="1714654062942-10">
         <addUniqueConstraint columnNames="document_id" constraintName="uk_5t3af36j82oiexg5gy067lbnk" tableName="workspace_member_files"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-11">
+    <changeSet author="alex.contu (generated)" id="1714654062942-11">
         <addUniqueConstraint columnNames="document_id" constraintName="uk_ivvk45vx5u03as4idsvdvt9j0" tableName="deal_files"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-12">
+    <changeSet author="alex.contu (generated)" id="1714654062942-12">
         <addUniqueConstraint columnNames="content_id" constraintName="uk_k34dj87eqmilkfuy6vkxcugd6" tableName="documents"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-13">
+    <changeSet author="alex.contu (generated)" id="1714654062942-13">
         <addUniqueConstraint columnNames="deal_id" constraintName="uk_lcpyffjk0byo8xw8gj3ipp76h" tableName="workspace_member_deals"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-14">
+    <changeSet author="alex.contu (generated)" id="1714654062942-14">
         <addUniqueConstraint columnNames="name" constraintName="uk_ofx66keruapi6vyqpv6f2or37" tableName="roles"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-15">
+    <changeSet author="alex.contu (generated)" id="1714654062942-15">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="seq_branch_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-16">
+    <changeSet author="alex.contu (generated)" id="1714654062942-16">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="seq_company_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-17">
+    <changeSet author="alex.contu (generated)" id="1714654062942-17">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="seq_contact_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-18">
+    <changeSet author="alex.contu (generated)" id="1714654062942-18">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="seq_deal_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-19">
+    <changeSet author="alex.contu (generated)" id="1714654062942-19">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="10" maxValue="9223372036854775807" minValue="1" sequenceName="seq_files_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-20">
+    <changeSet author="alex.contu (generated)" id="1714654062942-20">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="seq_lead_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-21">
+    <changeSet author="alex.contu (generated)" id="1714654062942-21">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="seq_role_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-22">
+    <changeSet author="alex.contu (generated)" id="1714654062942-22">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="seq_task_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-23">
+    <changeSet author="alex.contu (generated)" id="1714654062942-23">
         <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="seq_user_id" startValue="1"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-24">
+    <changeSet author="alex.contu (generated)" id="1714654062942-24">
         <createTable tableName="branches">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="branches_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -178,10 +202,13 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-25">
+    <changeSet author="alex.contu (generated)" id="1714654062942-25">
         <createTable tableName="companies">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="companies_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -191,10 +218,13 @@
             <column name="name" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-26">
+    <changeSet author="alex.contu (generated)" id="1714654062942-26">
         <createTable tableName="contacts">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="contacts_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -210,10 +240,13 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-27">
+    <changeSet author="alex.contu (generated)" id="1714654062942-27">
         <createTable tableName="users">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="users_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -226,7 +259,7 @@
             <column name="username" type="TEXT"/>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-28">
+    <changeSet author="alex.contu (generated)" id="1714654062942-28">
         <createTable tableName="users_roles">
             <column name="user_id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="users_roles_pkey"/>
@@ -236,8 +269,11 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-29">
+    <changeSet author="alex.contu (generated)" id="1714654062942-29">
         <createTable tableName="workspace_members">
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
             <column name="updated_date" type="TIMESTAMP WITH TIME ZONE"/>
@@ -250,65 +286,74 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-30">
+    <changeSet author="alex.contu (generated)" id="1714654062942-30">
         <createTable tableName="workspaces">
             <column name="owner_id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="workspaces_pkey"/>
+            </column>
+            <column name="tenant_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
             </column>
             <column name="created_by" type="TEXT"/>
             <column name="created_date" type="TIMESTAMP WITH TIME ZONE"/>
             <column name="updated_date" type="TIMESTAMP WITH TIME ZONE"/>
             <column name="updated_by" type="TEXT"/>
-            <column name="industry" type="VARCHAR(255)"/>
+            <column name="industry" type="TEXT"/>
             <column name="number_of_employees" type="BIGINT"/>
         </createTable>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-31">
+    <changeSet author="alex.contu (generated)" id="1714654062942-31">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="users_roles" constraintName="fk2o0jvgh89lemvvo17cbqvdxaa" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="users" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-32">
+    <changeSet author="alex.contu (generated)" id="1714654062942-32">
         <addForeignKeyConstraint baseColumnNames="workspace_member_id" baseTableName="deals" constraintName="fk57kcn4huqndi4q6mqc2ei36fl" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="member_id" referencedTableName="workspace_members" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-33">
+    <changeSet author="alex.contu (generated)" id="1714654062942-33">
         <addForeignKeyConstraint baseColumnNames="document_id" baseTableName="deal_files" constraintName="fk588rcy9lfr4wawb5947b1ljeo" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="documents" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-34">
+    <changeSet author="alex.contu (generated)" id="1714654062942-34">
         <addForeignKeyConstraint baseColumnNames="owner_id" baseTableName="workspaces" constraintName="fk58ks96jjlsbhsh21cen7hr59h" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="users" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-35">
+    <changeSet author="alex.contu (generated)" id="1714654062942-35">
+        <addForeignKeyConstraint baseColumnNames="workspace_owner_id" baseTableName="leads" constraintName="fk5ynbmqvnw8pj0rydlqy1r58ij" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="owner_id" referencedTableName="workspaces" validate="true"/>
+    </changeSet>
+    <changeSet author="alex.contu (generated)" id="1714654062942-36">
         <addForeignKeyConstraint baseColumnNames="workspace_member_id" baseTableName="workspace_member_files" constraintName="fk66g6cpldhjtecnomckib5mj8q" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="member_id" referencedTableName="workspace_members" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-36">
+    <changeSet author="alex.contu (generated)" id="1714654062942-37">
         <addForeignKeyConstraint baseColumnNames="member_id" baseTableName="workspace_members" constraintName="fk74vaip48xodle7trom9wfmes" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="users" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-37">
+    <changeSet author="alex.contu (generated)" id="1714654062942-38">
         <addForeignKeyConstraint baseColumnNames="deal_id" baseTableName="workspace_member_deals" constraintName="fkcq4429w1alwkaka8r416pk4nd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="deals" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-38">
+    <changeSet author="alex.contu (generated)" id="1714654062942-39">
         <addForeignKeyConstraint baseColumnNames="document_id" baseTableName="workspace_member_files" constraintName="fkeyrnar6hkef8aqyqtilxtsvov" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="documents" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-39">
+    <changeSet author="alex.contu (generated)" id="1714654062942-40">
         <addForeignKeyConstraint baseColumnNames="workspace_member_id" baseTableName="tasks" constraintName="fkj6fvwvcfeqjt57bakqcjq27i5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="member_id" referencedTableName="workspace_members" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-40">
+    <changeSet author="alex.contu (generated)" id="1714654062942-41">
         <addForeignKeyConstraint baseColumnNames="role_id" baseTableName="users_roles" constraintName="fkj6m8fwv7oqv74fcehir1a9ffy" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="roles" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-41">
+    <changeSet author="alex.contu (generated)" id="1714654062942-42">
         <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="branches" constraintName="fkjuiihymin83oadf71ou3oelya" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="companies" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-42">
+    <changeSet author="alex.contu (generated)" id="1714654062942-43">
         <addForeignKeyConstraint baseColumnNames="deal_id" baseTableName="deal_files" constraintName="fklu1oly6mvpslobrnv0d8ff96m" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="deals" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-43">
+    <changeSet author="alex.contu (generated)" id="1714654062942-44">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="deals" constraintName="fkrg1l1c9334kc4lkmcpwraqy3j" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="branches" validate="true"/>
+    </changeSet>
+    <changeSet author="alex.contu (generated)" id="1714654062942-45">
         <addForeignKeyConstraint baseColumnNames="workspace_member_id" baseTableName="workspace_member_deals" constraintName="fkrkyqlxy8138vcuxv7dqmpjodx" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="member_id" referencedTableName="workspace_members" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-44">
+    <changeSet author="alex.contu (generated)" id="1714654062942-46">
         <addForeignKeyConstraint baseColumnNames="lead_id" baseTableName="contacts" constraintName="fks8c8bsetl9rswh3sc5tonp7fy" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="leads" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-45">
+    <changeSet author="alex.contu (generated)" id="1714654062942-47">
         <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="leads" constraintName="fktgb8clsgg6l183toravpxgfad" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="companies" validate="true"/>
     </changeSet>
-    <changeSet author="alexa (generated)" id="1711312796931-46">
+    <changeSet author="alex.contu (generated)" id="1714654062942-48">
         <addForeignKeyConstraint baseColumnNames="workspace_id" baseTableName="workspace_members" constraintName="fkw9hq87n3rvq2c4j47qo78i5r" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="owner_id" referencedTableName="workspaces" validate="true"/>
     </changeSet>
 </databaseChangeLog>

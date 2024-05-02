@@ -32,6 +32,9 @@ public class Lead extends AuditedEntity {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
     private Company company;
 
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
+    private Workspace workspace;
+
     public void addContact(Contact contact) {
         contacts.add(contact);
         contact.setLead(this);

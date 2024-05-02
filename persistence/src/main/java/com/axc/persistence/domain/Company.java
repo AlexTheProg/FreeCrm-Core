@@ -30,11 +30,6 @@ public class Company extends AuditedEntity {
     @Setter(AccessLevel.PRIVATE)
     private Set<Branch> branches = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "company")
-    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @Setter(AccessLevel.PRIVATE)
-    private Set<Deal> deals = new HashSet<>();
-
     public void addBranch(Branch branch) {
         branches.add(branch);
         branch.setCompany(this);
@@ -46,18 +41,5 @@ public class Company extends AuditedEntity {
 
     public void removeBranch(Branch branch) {
         branches.remove(branch);
-    }
-
-    public void addDeal(Deal deal) {
-        deals.add(deal);
-        deal.setCompany(this);
-    }
-
-    public void addAllDeals(Collection<Deal> items) {
-        items.forEach(this::addDeal);
-    }
-
-    public void removeDeal(Deal deal) {
-        deals.remove(deal);
     }
 }

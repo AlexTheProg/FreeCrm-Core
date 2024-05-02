@@ -35,7 +35,7 @@ public class Deal extends AuditedEntity {
     @ManyToOne(fetch = FetchType.LAZY, optional = true)
     @JoinColumn(name = "company_id", nullable = false)
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    private Company company;
+    private Branch branch;
 
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)

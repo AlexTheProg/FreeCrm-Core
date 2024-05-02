@@ -24,7 +24,7 @@ public class TenantIdFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        tenantIdentifierResolver.setTenantId(currentUserHolder.getEmail());
+        tenantIdentifierResolver.setTenantId(currentUserHolder.getCurrentTenantId());
 
         try {
             filterChain.doFilter(request, response);

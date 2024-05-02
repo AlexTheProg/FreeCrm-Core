@@ -21,6 +21,12 @@ public class CurrentUserHolder {
         return SecurityUtils.getCurrentUserIdentifier().orElseThrow();
     }
 
+    public Long getCurrentTenantId() {
+        verifyAuthentication();
+
+        return SecurityUtils.getCurrentTenant().orElseThrow();
+    }
+
     public User get() {
         final String email = getEmail();
 
