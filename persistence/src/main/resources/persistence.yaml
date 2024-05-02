@@ -10,7 +10,7 @@ spring:
       ddl-auto: update
     generate-ddl: true
   liquibase:
-    enabled: false
+    enabled: true
     change-log: "classpath:/db-changelog/changelog-master.xml"
 
 

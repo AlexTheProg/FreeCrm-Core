@@ -1,0 +1,359 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="alex.contu (generated)" id="1714659969494-1">
+        <insert tableName="users">
+            <column name="id" valueNumeric="2"/>
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="dgrocock1@berkeley.edu"/>
+            <column name="first_name" value="Dian"/>
+            <column name="last_name" value="Grocock"/>
+            <column name="password" value="$2a$04$VaReg0pIi28DMbguMosrxu7dNdmjCU48BT6OuXe1p/U.h2UWt5oLK"/>
+            <column name="username" value="dgrocock1"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="14"/>
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="lastled@scientificamerican.com"/>
+            <column name="first_name" value="Livvie"/>
+            <column name="last_name" value="Astle"/>
+            <column name="password" value="$2a$04$2HBipE5yDYfNB8ChQy8nsejBXbKA1jR/YTcWFvb0R0yO82Lj.9Ml6"/>
+            <column name="username" value="lastled"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="4"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="tallsebrook3@tripadvisor.com"/>
+            <column name="first_name" value="Trevar"/>
+            <column name="last_name" value="Allsebrook"/>
+            <column name="password" value="$2a$04$rZoJUmqmyolDn.xtkw/CjOMKWw84E2DZoSCDXRqHa09.ahtsX9Ld6"/>
+            <column name="username" value="tallsebrook3"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="10"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="creal9@economist.com"/>
+            <column name="first_name" value="Crysta"/>
+            <column name="last_name" value="Real"/>
+            <column name="password" value="$2a$04$sjZrjKqpx7E8NjY77DnXWusteUHh8WMcXOTM9xxDaB.yzfIfbl63u"/>
+            <column name="username" value="creal9"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="8"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="rlosty7@ovh.net"/>
+            <column name="first_name" value="Reube"/>
+            <column name="last_name" value="Losty"/>
+            <column name="password" value="$2a$04$uO/.J8WVG4loQ/aLaohxyuV5F6FQvp78L3rRa9pPx13n4UvLWmyR."/>
+            <column name="username" value="rlosty7"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="6"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="parne5@auda.org.au"/>
+            <column name="first_name" value="Pattie"/>
+            <column name="last_name" value="Arne"/>
+            <column name="password" value="$2a$04$S6J3aZAiFBItpljjnsDDHOiucQMC2aeOkj.KnUHmpza9yoM/L9gMC"/>
+            <column name="username" value="parne5"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="15"/>
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="astoreye@imdb.com"/>
+            <column name="first_name" value="Arni"/>
+            <column name="last_name" value="Storey"/>
+            <column name="password" value="$2a$04$ZAi8d0PS4VlDJBQhV8A38etqcN8WCVZ0JzBBzuYG/jnPsCh8lT1RS"/>
+            <column name="username" value="astoreye"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="9"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="ndade8@vistaprint.com"/>
+            <column name="first_name" value="Nissie"/>
+            <column name="last_name" value="Dade"/>
+            <column name="password" value="$2a$04$/Nyi86rkjFgpWUiLLwBS..W/WIW6eSvY/A9bPj5zjtCIj.fhbulu."/>
+            <column name="username" value="ndade8"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="3"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="econdy2@time.com"/>
+            <column name="first_name" value="Emmy"/>
+            <column name="last_name" value="Condy"/>
+            <column name="password" value="$2a$04$hnnvfhekw.DtubHJLeDi1uUtgrbYad8LOy6MS7Xd3WdMPAKSWlr6G"/>
+            <column name="username" value="econdy2"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="5"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="ntixier4@telegraph.co.uk"/>
+            <column name="first_name" value="Norri"/>
+            <column name="last_name" value="Tixier"/>
+            <column name="password" value="$2a$04$BLk.CBclMgJqUPbsjxkF.uJ7fEkMx3EwTxearnlhevKcz9wLj9yhq"/>
+            <column name="username" value="ntixier4"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="7"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="mneeve6@admin.ch"/>
+            <column name="first_name" value="Marlo"/>
+            <column name="last_name" value="Neeve"/>
+            <column name="password" value="$2a$04$XiE9ebN0dzt830MJsbty5uHIDwk6txQd1BVXadCFmjzEFfPViM.rG"/>
+            <column name="username" value="mneeve6"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="1"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="mfarlow0@bloglines.com"/>
+            <column name="first_name" value="Mattie"/>
+            <column name="last_name" value="Farlow"/>
+            <column name="password" value="$2a$04$5h1qV1XnfyjgQL5loFcQtu4e33RFTr7EIRPfFg7jAquzLbN4PwFP6"/>
+            <column name="username" value="mfarlow0"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="11"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="mtimperleya@amazon.co.jp"/>
+            <column name="first_name" value="Maure"/>
+            <column name="last_name" value="Timperley"/>
+            <column name="password" value="$2a$04$NwAwzaceyHm8yiehjhjT6OeGGXLFyZiKYorm9MrEgnH.QkBUS3T7q"/>
+            <column name="username" value="mtimperleya"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="13"/>
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="kgurgec@nps.gov"/>
+            <column name="first_name" value="Kati"/>
+            <column name="last_name" value="Gurge"/>
+            <column name="password" value="$2a$04$PprygdZqhdONvJj0bMQPuOYmve8dmXQoriCAaYYUS5XJcRi32aNpm"/>
+            <column name="username" value="kgurgec"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="12"/>
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-04T21:05:28.044745"/>
+            <column name="updated_date" valueDate="2024-04-04T21:05:44.716824"/>
+            <column name="updated_by" value="system"/>
+            <column name="email" value="dortzenb@google.nl"/>
+            <column name="first_name" value="Dulcea"/>
+            <column name="last_name" value="Ortzen"/>
+            <column name="password" value="$2a$04$kil1u0kNgaiTjXpSgr5L/O.7MH/4llIzE46n5MllQ8xzLdc1blcqW"/>
+            <column name="username" value="dortzenb"/>
+        </insert>
+    </changeSet>
+    <changeSet author="alex.contu (generated)" id="1714659969494-2">
+        <insert tableName="workspaces">
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:06:31.395"/>
+            <column name="updated_date" valueDate="2024-04-05T00:06:33.497"/>
+            <column name="updated_by" value="system"/>
+            <column name="industry" value="IT"/>
+            <column name="number_of_employees" valueNumeric="10"/>
+        </insert>
+        <insert tableName="workspaces">
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:06:44.253"/>
+            <column name="updated_date" valueDate="2024-04-05T00:06:46.076"/>
+            <column name="updated_by" value="system"/>
+            <column name="industry" value="Entertainment"/>
+            <column name="number_of_employees" valueNumeric="5"/>
+        </insert>
+    </changeSet>
+    <changeSet author="alex.contu (generated)" id="1714659969494-3">
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:05.992"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:11.672"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="3"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:06.644"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:12.204"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="4"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:10.461"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:16.183"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="11"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:07.804"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:13.381"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="6"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:04.758"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:11.144"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="1"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:09.9"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:15.586"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="10"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:09.399"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:14.988"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="9"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:08.849"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:14.404"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="8"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:08.34"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:13.89"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="7"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="FreeCRM"/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:08:07.241"/>
+            <column name="updated_date" valueDate="2024-04-05T00:08:12.811"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="5"/>
+            <column name="workspace_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:09:36.703"/>
+            <column name="updated_date" valueDate="2024-04-05T00:09:39.362"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="12"/>
+            <column name="workspace_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:09:37.851"/>
+            <column name="updated_date" valueDate="2024-04-05T00:09:39.891"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="13"/>
+            <column name="workspace_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:09:38.353"/>
+            <column name="updated_date" valueDate="2024-04-05T00:09:40.366"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="14"/>
+            <column name="workspace_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:09:38.834"/>
+            <column name="updated_date" valueDate="2024-04-05T00:09:40.855"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="15"/>
+            <column name="workspace_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="workspace_members">
+            <column name="tenant_id" value="Evil Inc."/>
+            <column name="created_by" value="system"/>
+            <column name="created_date" valueDate="2024-04-05T00:09:51.821"/>
+            <column name="updated_date" valueDate="2024-04-05T00:09:50.83"/>
+            <column name="updated_by" value="system"/>
+            <column name="member_id" valueNumeric="2"/>
+            <column name="workspace_id" valueNumeric="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
