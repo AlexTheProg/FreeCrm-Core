@@ -15,14 +15,14 @@ spring:
 
 
 master-datasource:
-  url: jdbc:postgresql://localhost:5432/free-crm
+  url: jdbc:postgresql://localhost:5433/free-crm
   username: user
   password: password
   driver-class-name: org.postgresql.Driver
   configuration:
     pool-name: free-crm
 readonly-datasource:
-  url: jdbc:postgresql://localhost:5433/free-crm
+  url: jdbc:postgresql://localhost:5434/free-crm
   username: replicator
   password: replicator_password
   driver-class-name: org.postgresql.Driver
