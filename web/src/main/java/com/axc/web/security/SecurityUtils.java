@@ -37,14 +37,14 @@ public class SecurityUtils {
                 });
     }
 
-    public static Optional<Long> getCurrentTenant() {
+    public static Optional<String> getCurrentTenant() {
         var securityContext = SecurityContextHolder.getContext();
 
         return Optional.ofNullable(securityContext.getAuthentication())
                 .map(authentication -> {
                     if (authentication.getPrincipal() instanceof final Jwt jwt) {
                         var userMetadataClaims = jwt.getClaimAsMap("user_metadata");
-                        return (Long) userMetadataClaims.get("tenant");
+                        return (String) userMetadataClaims.get("tenant");
                     }
 
                     return null;

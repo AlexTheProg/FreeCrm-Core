@@ -14,11 +14,11 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class TenantIdentifierResolver implements CurrentTenantIdentifierResolver<String>, HibernatePropertiesCustomizer {
 
-    private Long tenantId = Long.MIN_VALUE;
+    private String tenantId = "undefined";
 
     @Override
     public String resolveCurrentTenantIdentifier() {
-        return Long.toString(tenantId);
+        return tenantId;
     }
 
     @Override

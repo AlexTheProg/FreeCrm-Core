@@ -21,7 +21,7 @@ public class CurrentUserHolder {
         return SecurityUtils.getCurrentUserIdentifier().orElseThrow();
     }
 
-    public Long getCurrentTenantId() {
+    public String getCurrentTenantId() {
         verifyAuthentication();
 
         return SecurityUtils.getCurrentTenant().orElseThrow();
