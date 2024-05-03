@@ -29,7 +29,6 @@ services:
       -c hot_standby_feedback=on
     volumes:
       - ./00_init.sql:/docker-entrypoint-initdb.d/00_init.sql
-      - ./master_db_volume:/var/lib/postgresql/data
 
   postgres_replica:
     <<: *postgres-common
@@ -51,6 +50,8 @@ services:
       "
     depends_on:
       - postgres_primary
+    volumes:
+      - /var/lib/postgresql/data
 
   redis:
     container_name: freecrm-redis
