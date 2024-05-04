@@ -1,0 +1,201 @@
+id,tenant_id,created_by,create_date,updated_by,updated_date,details,end_date,start_date,identifier,status,subject,workspace_member_id
+1,Evil Inc.,system,2023-11-19,system,2024-04-23,facilitate B2C action-items,2024-02-26,2023-05-13,something,CLOSED,"NETGEAR, Inc.",9
+2,FreeCRM,system,2023-09-14,system,2023-11-13,exploit frictionless web-readiness,2024-03-13,2023-12-07,something,IN_PROGRESS,"Athersys, Inc.",11
+3,Evil Inc.,system,2023-07-06,system,2024-02-04,redefine distributed ROI,2024-03-03,2023-06-24,something,IN_PROGRESS,"Anthem, Inc.",11
+4,FreeCRM,system,2023-07-10,system,2024-02-21,orchestrate clicks-and-mortar vortals,2024-02-13,2024-04-05,something,DONE,Select Asset Inc.,1
+5,FreeCRM,system,2023-09-01,system,2024-01-24,transition ubiquitous e-tailers,2024-04-20,2024-04-17,something,CLOSED,"Sunstone Hotel Investors, Inc.",5
+6,FreeCRM,system,2023-12-22,system,2023-12-25,drive impactful initiatives,2024-01-23,2023-05-11,something,IN_PROGRESS,"Lumber Liquidators Holdings, Inc",11
+7,Evil Inc.,system,2024-03-07,system,2023-07-29,synergize impactful vortals,2024-01-19,2023-05-05,something,IN_PROGRESS,"Crown Crafts, Inc.",6
+8,Evil Inc.,system,2023-11-04,system,2024-03-26,scale distributed niches,2024-01-06,2024-04-12,something,IN_PROGRESS,Citigroup Inc.,6
+9,Evil Inc.,system,2023-12-29,system,2023-05-14,synthesize clicks-and-mortar supply-chains,2024-02-26,2024-03-24,something,CLOSED,Forward Air Corporation,7
+10,Evil Inc.,system,2024-02-08,system,2024-02-20,empower robust infrastructures,2024-01-05,2024-03-25,something,TODO,Nuveen AMT-Free Municipal Value Fund,9
+11,FreeCRM,system,2023-09-11,system,2023-07-10,whiteboard robust interfaces,2024-04-27,2023-06-02,something,IN_PROGRESS,"Tandem Diabetes Care, Inc.",16
+12,Evil Inc.,system,2024-04-08,system,2023-08-30,maximize web-enabled e-business,2024-04-25,2024-03-07,something,DONE,Vaalco Energy Inc,10
+13,FreeCRM,system,2024-04-29,system,2023-07-17,cultivate bricks-and-clicks e-services,2024-03-20,2023-05-04,something,TODO,ProQR Therapeutics N.V.,7
+14,FreeCRM,system,2023-11-25,system,2023-07-20,disintermediate sexy architectures,2024-01-04,2024-04-27,something,TODO,Cumulus Media Inc.,3
+15,FreeCRM,system,2023-06-27,system,2024-01-31,strategize viral e-business,2024-03-30,2023-12-13,something,CLOSED,YY Inc.,9
+16,Evil Inc.,system,2024-03-17,system,2023-08-01,target turn-key applications,2024-01-19,2023-05-18,something,DONE,Cincinnati Financial Corporation,3
+17,Evil Inc.,system,2023-12-11,system,2023-07-07,target transparent functionalities,2024-04-05,2023-09-15,something,IN_PROGRESS,PIMCO Dynamic Credit and Mortgage Income Fund,10
+18,Evil Inc.,system,2024-01-26,system,2023-12-10,extend frictionless users,2024-03-25,2024-04-09,something,CLOSED,Ralph Lauren Corporation,16
+19,FreeCRM,system,2024-01-26,system,2023-12-26,evolve end-to-end networks,2024-03-26,2023-12-14,something,TODO,"McCormick & Company, Incorporated",9
+20,FreeCRM,system,2023-12-07,system,2023-07-25,recontextualize efficient deliverables,2024-03-28,2023-09-06,something,IN_PROGRESS,"Workday, Inc.",3
+21,Evil Inc.,system,2024-04-11,system,2023-08-03,integrate viral e-tailers,2024-05-02,2024-03-12,something,TODO,"TerraForm Power, Inc.",4
+22,FreeCRM,system,2024-02-04,system,2023-09-01,reinvent proactive metrics,2024-01-04,2023-09-14,something,TODO,Sequans Communications S.A.,6
+23,FreeCRM,system,2024-01-07,system,2024-04-02,unleash global users,2024-02-01,2023-09-28,something,DONE,"Gap, Inc. (The)",1
+24,FreeCRM,system,2023-05-24,system,2023-09-25,transform 24/365 action-items,2024-03-05,2024-03-18,something,IN_PROGRESS,IBERIABANK Corporation,9
+25,Evil Inc.,system,2023-12-10,system,2023-09-07,enable front-end systems,2024-04-08,2023-09-02,something,IN_PROGRESS,Mercantile Bank Corporation,1
+26,Evil Inc.,system,2023-08-07,system,2024-02-16,synergize customized convergence,2024-03-27,2024-04-16,something,CLOSED,Enstar Group Limited,5
+27,FreeCRM,system,2023-09-23,system,2023-06-25,exploit strategic niches,2024-01-01,2024-01-29,something,IN_PROGRESS,Robert Half International Inc.,16
+28,FreeCRM,system,2023-11-22,system,2024-03-20,maximize rich supply-chains,2024-03-21,2023-10-25,something,IN_PROGRESS,Hillenbrand Inc,10
+29,FreeCRM,system,2023-08-07,system,2023-12-08,leverage synergistic eyeballs,2024-03-04,2023-06-16,something,CLOSED,"GAIN Capital Holdings, Inc.",3
+30,FreeCRM,system,2024-03-03,system,2023-08-11,embrace transparent metrics,2024-04-17,2023-05-11,something,TODO,Principal U.S. Small Cap Index ETF,10
+31,FreeCRM,system,2024-01-22,system,2024-02-28,benchmark extensible schemas,2024-03-17,2023-05-04,something,TODO,"Coherus BioSciences, Inc.",10
+32,FreeCRM,system,2023-06-01,system,2023-09-15,mesh user-centric infomediaries,2024-02-20,2023-07-29,something,DONE,"EnLink Midstream Partners, LP",5
+33,FreeCRM,system,2023-06-20,system,2023-07-01,synthesize efficient e-markets,2024-03-06,2023-11-22,something,IN_PROGRESS,"Reinsurance Group of America, Incorporated",4
+34,FreeCRM,system,2023-11-20,system,2023-07-16,synergize dot-com eyeballs,2024-02-10,2023-05-27,something,TODO,American Homes 4 Rent,16
+35,Evil Inc.,system,2024-04-04,system,2024-01-02,disintermediate frictionless solutions,2024-04-18,2023-12-07,something,TODO,Rice Energy Inc.,3
+36,Evil Inc.,system,2024-02-05,system,2023-07-16,visualize impactful e-markets,2024-03-18,2023-10-29,something,IN_PROGRESS,"CSW Industrials, Inc.",3
+37,FreeCRM,system,2023-10-01,system,2023-05-24,repurpose 24/7 models,2024-03-19,2023-09-24,something,IN_PROGRESS,"AmeriGas Partners, L.P.",1
+38,FreeCRM,system,2023-06-05,system,2023-09-25,matrix bricks-and-clicks bandwidth,2024-01-31,2023-10-07,something,IN_PROGRESS,NASDAQ TEST STOCK,6
+39,Evil Inc.,system,2024-01-25,system,2023-07-03,incubate dot-com mindshare,2024-04-18,2023-05-27,something,DONE,Monmouth Real Estate Investment Corporation,11
+40,Evil Inc.,system,2023-12-21,system,2023-10-17,transition wireless web-readiness,2024-04-04,2023-09-17,something,CLOSED,Vanguard Short-Term Inflation-Protected Securities Index Fund,3
+41,Evil Inc.,system,2024-02-26,system,2023-08-30,revolutionize clicks-and-mortar paradigms,2024-03-06,2023-12-12,something,DONE,"FormFactor, Inc.",16
+42,Evil Inc.,system,2024-01-29,system,2024-01-01,transform virtual technologies,2024-02-08,2023-06-22,something,IN_PROGRESS,"On Assignment, Inc.",10
+43,FreeCRM,system,2023-08-07,system,2023-11-23,implement frictionless synergies,2024-01-06,2024-03-06,something,CLOSED,Bank of America Corporation,11
+44,Evil Inc.,system,2023-12-01,system,2023-08-20,visualize magnetic content,2024-03-23,2023-07-12,something,DONE,"Simulations Plus, Inc.",11
+45,FreeCRM,system,2024-04-22,system,2023-12-04,recontextualize collaborative web services,2024-01-26,2023-06-18,something,IN_PROGRESS,First Financial Bancorp.,7
+46,Evil Inc.,system,2023-08-20,system,2023-12-25,innovate open-source content,2024-02-27,2024-03-13,something,IN_PROGRESS,"Watts Water Technologies, Inc.",6
+47,Evil Inc.,system,2023-05-30,system,2023-08-24,unleash innovative initiatives,2024-02-13,2023-12-31,something,CLOSED,Mimecast Limited,9
+48,FreeCRM,system,2023-06-28,system,2023-05-20,utilize interactive schemas,2024-02-07,2023-10-18,something,TODO,Compugen Ltd.,6
+49,Evil Inc.,system,2023-05-11,system,2024-01-20,engage impactful communities,2024-02-02,2024-04-26,something,DONE,"Inovio Pharmaceuticals, Inc.",3
+50,FreeCRM,system,2023-12-21,system,2023-06-03,benchmark best-of-breed e-markets,2024-04-30,2023-07-28,something,TODO,"ARMOUR Residential REIT, Inc.",11
+51,Evil Inc.,system,2024-04-23,system,2023-11-10,exploit 24/365 platforms,2024-01-20,2023-06-25,something,DONE,"NantKwest, Inc.",7
+52,Evil Inc.,system,2024-04-03,system,2023-06-30,incubate efficient systems,2024-04-10,2023-10-20,something,DONE,"The Ensign Group, Inc.",1
+53,FreeCRM,system,2024-03-27,system,2024-02-25,benchmark B2C paradigms,2024-04-21,2023-07-18,something,TODO,Liberty Property Trust,1
+54,Evil Inc.,system,2023-06-13,system,2024-04-20,reinvent synergistic markets,2024-03-16,2024-03-06,something,CLOSED,Adamis Pharmaceuticals Corporation,1
+55,Evil Inc.,system,2024-04-29,system,2023-10-18,innovate real-time channels,2024-04-06,2023-06-09,something,TODO,Fang Holdings Limited,16
+56,Evil Inc.,system,2024-02-17,system,2024-02-14,innovate compelling markets,2024-04-28,2024-02-18,something,DONE,Clipper Realty Inc.,7
+57,Evil Inc.,system,2024-02-02,system,2023-11-18,expedite cutting-edge infrastructures,2024-01-13,2023-11-02,something,TODO,GlaxoSmithKline PLC,10
+58,FreeCRM,system,2023-10-23,system,2023-05-06,orchestrate transparent functionalities,2024-04-24,2023-06-15,something,IN_PROGRESS,"Daseke, Inc.",11
+59,FreeCRM,system,2023-05-30,system,2024-04-29,benchmark visionary e-markets,2024-02-06,2024-02-16,something,TODO,Tupperware Brands Corporation,9
+60,Evil Inc.,system,2023-11-30,system,2023-08-08,cultivate scalable supply-chains,2024-04-20,2024-01-06,something,DONE,TriplePoint Venture Growth BDC Corp.,5
+61,Evil Inc.,system,2024-03-27,system,2024-04-15,morph plug-and-play web services,2024-03-17,2023-07-12,something,IN_PROGRESS,"Bridge Bancorp, Inc.",9
+62,FreeCRM,system,2023-05-30,system,2023-06-09,recontextualize extensible web-readiness,2024-02-19,2023-08-20,something,TODO,Qwest Corporation,8
+63,FreeCRM,system,2023-12-03,system,2024-03-15,grow proactive experiences,2024-01-28,2024-03-01,something,TODO,The KEYW Holding Corporation,10
+64,Evil Inc.,system,2023-09-05,system,2024-02-28,productize bricks-and-clicks experiences,2024-03-11,2023-07-12,something,IN_PROGRESS,Central Valley Community Bancorp,8
+65,Evil Inc.,system,2023-08-25,system,2024-01-29,revolutionize global communities,2024-02-29,2023-12-22,something,IN_PROGRESS,Harmony Merger Corp.,10
+66,FreeCRM,system,2024-03-04,system,2023-07-04,strategize leading-edge synergies,2024-01-03,2023-11-28,something,CLOSED,"Pacific American Income Shares, Inc.",16
+67,Evil Inc.,system,2024-03-26,system,2023-10-13,iterate revolutionary eyeballs,2024-03-10,2023-06-18,something,DONE,Two Harbors Investments Corp,1
+68,FreeCRM,system,2023-06-06,system,2023-06-01,aggregate visionary e-business,2024-01-20,2023-07-20,something,DONE,SemiLEDS Corporation,3
+69,FreeCRM,system,2023-10-25,system,2024-03-19,extend leading-edge experiences,2024-04-01,2023-05-24,something,IN_PROGRESS,Eli Lilly and Company,4
+70,Evil Inc.,system,2024-01-31,system,2023-05-16,deploy dot-com technologies,2024-04-21,2024-04-13,something,DONE,Quest Resource Holding Corporation.,1
+71,Evil Inc.,system,2024-01-01,system,2023-11-11,grow magnetic eyeballs,2024-04-23,2023-06-04,something,DONE,Tupperware Brands Corporation,6
+72,Evil Inc.,system,2023-05-28,system,2024-03-25,enhance rich schemas,2024-03-30,2024-01-15,something,DONE,"WideOpenWest, Inc.",16
+73,Evil Inc.,system,2023-07-11,system,2024-02-17,extend mission-critical paradigms,2024-01-12,2024-04-23,something,TODO,Tocagen Inc.,1
+74,FreeCRM,system,2024-04-20,system,2024-02-22,whiteboard transparent niches,2024-02-08,2023-05-08,something,DONE,"Enable Midstream Partners, LP",8
+75,Evil Inc.,system,2023-06-21,system,2023-07-01,architect e-business web services,2024-04-15,2023-06-21,something,TODO,Seaspan Corporation,10
+76,Evil Inc.,system,2024-03-20,system,2023-05-10,engage dynamic bandwidth,2024-01-13,2024-02-16,something,DONE,"China Information Technology, Inc.",7
+77,FreeCRM,system,2023-08-17,system,2023-12-07,exploit sexy eyeballs,2024-01-28,2023-06-26,something,DONE,Primo Water Corporation,6
+78,Evil Inc.,system,2024-01-06,system,2023-09-19,enhance cross-platform action-items,2024-03-13,2024-02-19,something,TODO,"Virtus Investment Partners, Inc.",6
+79,Evil Inc.,system,2023-12-14,system,2024-03-22,envisioneer innovative schemas,2024-02-02,2023-06-18,something,IN_PROGRESS,CrossAmerica Partners LP,1
+80,Evil Inc.,system,2023-10-07,system,2024-01-29,reinvent viral e-commerce,2024-02-09,2023-05-29,something,IN_PROGRESS,Louisiana-Pacific Corporation,7
+81,FreeCRM,system,2024-02-11,system,2023-06-02,deliver frictionless metrics,2024-01-04,2023-05-23,something,CLOSED,Berkshire Hathaway Inc.,4
+82,Evil Inc.,system,2024-01-22,system,2023-07-20,maximize 24/365 solutions,2024-01-08,2023-07-20,something,CLOSED,First Trust NASDAQ-100- Technology Index Fund,4
+83,FreeCRM,system,2023-05-29,system,2023-11-17,mesh magnetic niches,2024-04-20,2023-06-19,something,TODO,Origin Agritech Limited,5
+84,FreeCRM,system,2023-12-20,system,2023-07-26,visualize integrated methodologies,2024-03-14,2023-08-02,something,TODO,Ecopetrol S.A.,10
+85,Evil Inc.,system,2023-12-12,system,2023-11-28,envisioneer intuitive relationships,2024-03-31,2024-01-03,something,IN_PROGRESS,"Champions Oncology, Inc.",7
+86,FreeCRM,system,2024-03-24,system,2024-02-05,visualize bleeding-edge relationships,2024-04-13,2023-05-24,something,IN_PROGRESS,"Salem Media Group, Inc.",1
+87,Evil Inc.,system,2023-10-31,system,2024-03-17,enhance killer paradigms,2024-04-03,2023-08-25,something,TODO,"CST Brands, Inc.",7
+88,FreeCRM,system,2023-09-24,system,2023-11-24,mesh user-centric systems,2024-04-13,2023-12-17,something,DONE,Macquarie/First Trust Global,5
+89,Evil Inc.,system,2023-09-13,system,2023-07-25,utilize sexy partnerships,2024-03-02,2023-06-15,something,IN_PROGRESS,Crane Company,6
+90,FreeCRM,system,2023-08-22,system,2023-12-12,enhance viral models,2024-05-02,2023-10-11,something,TODO,AmeriServ Financial Inc.,10
+91,FreeCRM,system,2023-06-15,system,2024-03-15,architect revolutionary e-markets,2024-04-15,2023-09-10,something,DONE,"American Eagle Outfitters, Inc.",16
+92,FreeCRM,system,2023-06-19,system,2024-04-16,reintermediate revolutionary architectures,2024-04-25,2023-06-25,something,CLOSED,Nokia Corporation,3
+93,FreeCRM,system,2023-10-08,system,2023-06-13,whiteboard ubiquitous communities,2024-03-19,2024-01-08,something,IN_PROGRESS,"Guidewire Software, Inc.",9
+94,FreeCRM,system,2024-04-01,system,2023-12-06,monetize global portals,2024-04-06,2023-05-09,something,CLOSED,Tekla Healthcare Investors,6
+95,Evil Inc.,system,2023-09-13,system,2023-08-27,synthesize distributed initiatives,2024-04-28,2023-10-11,something,TODO,First Trust Specialty Finance and Financial Opportunities Fund,6
+96,Evil Inc.,system,2023-07-07,system,2023-05-18,evolve collaborative supply-chains,2024-04-16,2023-11-29,something,DONE,Numerex Corp.,1
+97,FreeCRM,system,2023-05-21,system,2023-10-22,exploit B2B architectures,2024-04-17,2023-05-18,something,DONE,Plexus Corp.,3
+98,FreeCRM,system,2023-08-20,system,2023-10-17,whiteboard granular content,2024-03-25,2023-12-27,something,DONE,"DineEquity, Inc",16
+99,FreeCRM,system,2023-07-21,system,2024-01-19,target B2C infomediaries,2024-03-04,2023-11-07,something,TODO,Hallador Energy Company,11
+100,FreeCRM,system,2023-06-13,system,2023-05-22,leverage e-business methodologies,2024-03-08,2023-08-26,something,TODO,"Hawaiian Holdings, Inc.",11
+101,Evil Inc.,system,2023-07-04,system,2023-12-20,engineer enterprise platforms,2024-03-15,2023-05-07,something,TODO,Calgon Carbon Corporation,9
+102,FreeCRM,system,2023-09-03,system,2024-04-05,expedite frictionless web-readiness,2024-02-27,2023-12-21,something,DONE,Bioverativ Inc.,6
+103,FreeCRM,system,2023-12-12,system,2023-09-07,engineer wireless relationships,2024-02-26,2024-05-02,something,IN_PROGRESS,"Spok Holdings, Inc.",5
+104,Evil Inc.,system,2023-11-17,system,2024-03-11,innovate real-time action-items,2024-04-20,2023-11-01,something,CLOSED,"TerraForm Power, Inc.",16
+105,FreeCRM,system,2023-11-07,system,2024-01-18,integrate cutting-edge solutions,2024-02-23,2023-11-04,something,IN_PROGRESS,JM Global Holding Company,3
+106,Evil Inc.,system,2024-01-27,system,2024-02-17,disintermediate holistic paradigms,2024-04-13,2024-01-23,something,CLOSED,"PS Business Parks, Inc.",11
+107,FreeCRM,system,2023-05-26,system,2024-03-31,leverage leading-edge experiences,2024-04-26,2023-11-17,something,TODO,Hubbell Inc,11
+108,Evil Inc.,system,2023-06-20,system,2024-02-09,seize world-class portals,2024-03-19,2023-07-04,something,IN_PROGRESS,Vulcan Materials Company,8
+109,Evil Inc.,system,2023-11-11,system,2023-06-17,generate seamless initiatives,2024-01-18,2023-12-06,something,DONE,BlackRock California Municipal Income Trust,9
+110,Evil Inc.,system,2023-08-18,system,2023-09-10,synergize best-of-breed content,2024-03-12,2023-12-25,something,IN_PROGRESS,"AMERISAFE, Inc.",3
+111,FreeCRM,system,2023-05-25,system,2024-01-01,incentivize killer e-markets,2024-02-07,2024-01-05,something,CLOSED,BankFinancial Corporation,3
+112,Evil Inc.,system,2024-01-31,system,2023-05-04,brand user-centric action-items,2024-04-12,2023-12-01,something,TODO,Garrison Capital Inc.,5
+113,FreeCRM,system,2024-01-22,system,2024-04-26,synthesize mission-critical technologies,2024-03-23,2023-06-15,something,IN_PROGRESS,Noah Holdings Ltd.,7
+114,Evil Inc.,system,2023-05-26,system,2023-12-26,monetize cross-media relationships,2024-03-14,2024-03-30,something,IN_PROGRESS,"Nelnet, Inc.",9
+115,FreeCRM,system,2023-07-17,system,2023-06-24,envisioneer extensible architectures,2024-04-18,2023-05-19,something,IN_PROGRESS,Boston Omaha Corporation,5
+116,Evil Inc.,system,2024-01-29,system,2024-04-04,reintermediate next-generation deliverables,2024-01-29,2023-05-16,something,IN_PROGRESS,Textainer Group Holdings Limited,6
+117,FreeCRM,system,2024-02-02,system,2024-03-13,cultivate dynamic web services,2024-03-24,2023-11-12,something,IN_PROGRESS,Cerner Corporation,8
+118,Evil Inc.,system,2023-08-13,system,2024-02-13,reinvent dynamic infomediaries,2024-03-29,2023-05-23,something,CLOSED,Enel Chile S.A.,6
+119,FreeCRM,system,2024-03-04,system,2023-12-25,optimize compelling technologies,2024-04-24,2024-04-24,something,TODO,CNOOC Limited,1
+120,FreeCRM,system,2023-08-21,system,2024-01-10,empower plug-and-play action-items,2024-04-15,2023-11-02,something,TODO,Advent/Claymore Enhanced Growth & Income Fund,11
+121,FreeCRM,system,2023-08-22,system,2024-04-21,reintermediate magnetic metrics,2024-02-11,2023-06-02,something,DONE,Mistras Group Inc,4
+122,Evil Inc.,system,2023-10-09,system,2023-05-22,expedite world-class paradigms,2024-02-18,2023-12-28,something,TODO,PIMCO Dynamic Credit and Mortgage Income Fund,5
+123,FreeCRM,system,2023-09-27,system,2024-03-05,cultivate rich partnerships,2024-03-12,2023-05-12,something,IN_PROGRESS,Occidental Petroleum Corporation,4
+124,FreeCRM,system,2023-11-10,system,2023-12-14,engineer compelling markets,2024-04-20,2023-06-28,something,CLOSED,VictoryShares Developed Enhanced Volatility Wtd ETF,8
+125,FreeCRM,system,2023-09-18,system,2023-07-12,redefine B2B infrastructures,2024-01-02,2024-01-25,something,IN_PROGRESS,"Planet Fitness, Inc.",1
+126,FreeCRM,system,2024-04-19,system,2024-02-16,maximize clicks-and-mortar portals,2024-01-22,2023-09-23,something,DONE,"Foundation Building Materials, Inc.",7
+127,Evil Inc.,system,2024-03-26,system,2023-11-27,mesh bricks-and-clicks architectures,2024-01-08,2024-01-18,something,DONE,PowerShares DWA Developed Markets Momentum Portfolio,6
+128,Evil Inc.,system,2023-11-12,system,2024-02-21,harness innovative eyeballs,2024-01-02,2024-04-08,something,CLOSED,Agnico Eagle Mines Limited,1
+129,FreeCRM,system,2024-01-21,system,2024-03-19,target bricks-and-clicks platforms,2024-03-15,2023-12-07,something,TODO,"PDF Solutions, Inc.",11
+130,FreeCRM,system,2023-05-09,system,2024-04-25,aggregate back-end networks,2024-02-22,2024-01-27,something,DONE,Conyers Park Acquisition Corp.,16
+131,Evil Inc.,system,2024-02-09,system,2024-01-31,maximize vertical relationships,2024-02-07,2023-06-11,something,CLOSED,"T. Rowe Price Group, Inc.",11
+132,Evil Inc.,system,2023-10-25,system,2024-02-04,seize 24/7 platforms,2024-03-01,2023-06-14,something,CLOSED,YY Inc.,7
+133,FreeCRM,system,2023-08-06,system,2023-09-09,revolutionize ubiquitous markets,2024-03-01,2024-02-15,something,TODO,"Meta Financial Group, Inc.",6
+134,FreeCRM,system,2023-05-19,system,2024-04-12,deploy cutting-edge bandwidth,2024-03-29,2023-12-25,something,TODO,Cemtrex Inc.,8
+135,FreeCRM,system,2024-04-17,system,2023-10-03,strategize seamless networks,2024-02-06,2024-04-29,something,DONE,FelCor Lodging Trust Incorporated,1
+136,Evil Inc.,system,2023-09-20,system,2023-09-22,empower end-to-end e-commerce,2024-01-11,2024-01-24,something,TODO,Ciner Resources LP,6
+137,Evil Inc.,system,2023-09-26,system,2023-07-15,cultivate B2B web-readiness,2024-03-01,2024-02-24,something,IN_PROGRESS,"Eleven Biotherapeutics, Inc.",5
+138,Evil Inc.,system,2024-01-29,system,2024-02-22,embrace collaborative communities,2024-04-17,2023-11-18,something,CLOSED,Nationstar Mortgage Holdings Inc.,16
+139,Evil Inc.,system,2023-08-25,system,2024-04-15,extend clicks-and-mortar interfaces,2024-04-06,2023-10-23,something,IN_PROGRESS,"Telephone and Data Systems, Inc.",11
+140,FreeCRM,system,2023-11-29,system,2023-10-25,seize impactful users,2024-04-20,2024-01-05,something,DONE,"NextEra Energy, Inc.",9
+141,FreeCRM,system,2024-03-22,system,2024-02-05,envisioneer wireless technologies,2024-03-01,2023-11-11,something,CLOSED,Bill Barrett Corporation,1
+142,FreeCRM,system,2023-10-10,system,2023-11-10,deliver vertical bandwidth,2024-04-22,2023-09-29,something,IN_PROGRESS,Sony Corp Ord,3
+143,FreeCRM,system,2023-12-06,system,2023-07-10,engineer sexy systems,2024-02-07,2024-02-10,something,DONE,City Holding Company,1
+144,FreeCRM,system,2024-03-30,system,2023-07-15,deploy sexy web services,2024-01-24,2023-08-25,something,DONE,Canadian National Railway Company,10
+145,FreeCRM,system,2023-07-08,system,2023-06-18,architect out-of-the-box eyeballs,2024-04-21,2024-02-24,something,DONE,California Water  Service Group Holding,16
+146,FreeCRM,system,2023-06-20,system,2023-11-03,morph proactive web services,2024-03-24,2024-02-16,something,IN_PROGRESS,TechnipFMC plc,10
+147,FreeCRM,system,2023-05-16,system,2023-11-05,transform collaborative platforms,2024-04-02,2023-05-11,something,TODO,American Homes 4 Rent,11
+148,Evil Inc.,system,2024-01-23,system,2023-07-18,cultivate impactful e-business,2024-01-12,2024-04-24,something,IN_PROGRESS,Service Corporation International,5
+149,Evil Inc.,system,2024-03-25,system,2023-07-28,innovate synergistic applications,2024-02-27,2023-11-26,something,IN_PROGRESS,"Sonoma Pharmaceuticals, Inc.",7
+150,Evil Inc.,system,2023-05-14,system,2023-09-29,reinvent enterprise paradigms,2024-03-19,2023-07-09,something,TODO,DAQO New Energy Corp.,7
+151,FreeCRM,system,2024-01-30,system,2024-04-29,unleash B2C experiences,2024-04-03,2024-02-27,something,IN_PROGRESS,"ModusLink Global Solutions, Inc",1
+152,Evil Inc.,system,2023-08-01,system,2023-08-14,enable impactful e-markets,2024-05-02,2024-02-18,something,DONE,First Trust MLP and Energy Income Fund,1
+153,FreeCRM,system,2024-03-01,system,2023-07-28,architect leading-edge e-services,2024-03-17,2023-07-08,something,TODO,BP p.l.c.,4
+154,FreeCRM,system,2023-05-16,system,2024-04-25,e-enable best-of-breed partnerships,2024-01-11,2023-12-17,something,DONE,Vanguard Global ex-U.S. Real Estate ETF,1
+155,FreeCRM,system,2024-03-09,system,2023-12-17,monetize distributed architectures,2024-03-13,2023-10-08,something,DONE,OM Asset Management plc,1
+156,Evil Inc.,system,2024-03-29,system,2024-04-04,envisioneer clicks-and-mortar metrics,2024-04-17,2023-07-14,something,IN_PROGRESS,ASA Gold and Precious Metals Limited,9
+157,Evil Inc.,system,2024-03-21,system,2024-01-21,repurpose impactful markets,2024-04-11,2023-11-21,something,DONE,"Simpson Manufacturing Company, Inc.",16
+158,Evil Inc.,system,2023-11-05,system,2023-06-04,grow user-centric users,2024-03-16,2023-10-18,something,DONE,Public Service Enterprise Group Incorporated,1
+159,FreeCRM,system,2023-10-05,system,2024-03-23,evolve rich infomediaries,2024-02-08,2023-06-12,something,DONE,Robert Half International Inc.,4
+160,Evil Inc.,system,2024-02-11,system,2023-10-24,deliver customized niches,2024-04-28,2023-08-10,something,DONE,Federated National Holding Company,11
+161,Evil Inc.,system,2023-05-07,system,2024-01-31,scale sexy vortals,2024-03-27,2023-09-24,something,CLOSED,Salesforce.com Inc,9
+162,Evil Inc.,system,2024-02-16,system,2023-07-24,implement user-centric functionalities,2024-04-15,2023-11-16,something,IN_PROGRESS,Dana Incorporated,1
+163,Evil Inc.,system,2023-11-02,system,2023-12-10,evolve back-end eyeballs,2024-02-15,2023-07-26,something,CLOSED,S&W Seed Company,8
+164,Evil Inc.,system,2023-11-05,system,2023-05-23,unleash world-class infrastructures,2024-01-04,2023-10-11,something,IN_PROGRESS,Avista Healthcare Public Acquisition Corp.,11
+165,FreeCRM,system,2023-06-13,system,2023-11-12,enable dot-com niches,2024-03-16,2023-07-30,something,TODO,"Novus Therapeutics, Inc.",4
+166,Evil Inc.,system,2023-12-31,system,2024-03-19,synthesize e-business e-commerce,2024-02-16,2023-05-18,something,CLOSED,"AMTEK, Inc.",1
+167,Evil Inc.,system,2023-09-17,system,2023-11-16,orchestrate killer e-business,2024-04-30,2024-04-16,something,CLOSED,RAIT Financial Trust,9
+168,FreeCRM,system,2023-09-11,system,2024-02-12,target best-of-breed interfaces,2024-02-04,2024-03-21,something,TODO,Humana Inc.,16
+169,FreeCRM,system,2023-12-08,system,2023-10-01,synergize wireless ROI,2024-01-02,2023-08-22,something,CLOSED,CONSOL Energy Inc.,10
+170,Evil Inc.,system,2024-01-31,system,2024-01-31,architect impactful metrics,2024-03-21,2023-08-16,something,DONE,"Thai Fund, Inc. (The)",4
+171,FreeCRM,system,2024-01-03,system,2023-12-18,recontextualize holistic e-tailers,2024-01-03,2023-12-04,something,IN_PROGRESS,First Trust Dorsey Wright Dynamic Focus 5 ETF,5
+172,FreeCRM,system,2024-02-21,system,2023-05-30,whiteboard bleeding-edge web-readiness,2024-01-30,2024-01-20,something,TODO,Alleghany Corporation,10
+173,FreeCRM,system,2024-04-02,system,2023-08-31,facilitate sticky relationships,2024-03-11,2024-03-07,something,DONE,First Trust NASDAQ Clean Edge Green Energy Index Fund,8
+174,Evil Inc.,system,2023-08-29,system,2023-10-04,incentivize dynamic portals,2024-03-11,2023-09-29,something,DONE,Symantec Corporation,1
+175,FreeCRM,system,2023-11-13,system,2024-04-28,recontextualize out-of-the-box platforms,2024-04-28,2023-07-21,something,CLOSED,First Trust NASDAQ Technology Dividend Index Fund,10
+176,Evil Inc.,system,2023-07-01,system,2023-07-27,evolve interactive niches,2024-04-09,2023-07-08,something,DONE,Vanda Pharmaceuticals Inc.,11
+177,Evil Inc.,system,2023-08-14,system,2024-04-11,maximize wireless supply-chains,2024-01-05,2023-08-19,something,TODO,Enbridge Energy Management LLC,6
+178,FreeCRM,system,2024-03-28,system,2023-08-30,revolutionize efficient mindshare,2024-01-12,2023-09-07,something,CLOSED,"Citizens Community Bancorp, Inc.",3
+179,Evil Inc.,system,2023-09-11,system,2024-03-09,evolve one-to-one infomediaries,2024-03-20,2023-09-22,something,TODO,Geo Group Inc (The),6
+180,FreeCRM,system,2023-07-29,system,2024-01-25,innovate dynamic partnerships,2024-03-10,2024-03-11,something,CLOSED,Heritage Financial Corporation,16
+181,Evil Inc.,system,2024-01-02,system,2023-08-19,deliver next-generation infrastructures,2024-05-03,2023-12-26,something,CLOSED,Veeco Instruments Inc.,8
+182,FreeCRM,system,2023-05-27,system,2023-07-11,engage innovative supply-chains,2024-03-14,2023-09-18,something,TODO,West Bancorporation,4
+183,FreeCRM,system,2023-10-01,system,2023-12-07,target value-added vortals,2024-03-07,2024-02-18,something,TODO,"Maiden Holdings, Ltd.",10
+184,FreeCRM,system,2023-06-19,system,2024-03-08,mesh end-to-end web-readiness,2024-04-01,2023-11-22,something,DONE,CMS Energy Corporation,7
+185,Evil Inc.,system,2024-02-09,system,2023-06-12,orchestrate world-class markets,2024-05-02,2024-01-17,something,TODO,Sun Life Financial Inc.,11
+186,FreeCRM,system,2023-05-16,system,2023-05-26,transform mission-critical e-services,2024-04-08,2023-12-03,something,CLOSED,"Art's-Way Manufacturing Co., Inc.",6
+187,Evil Inc.,system,2023-08-14,system,2024-04-09,optimize cross-platform architectures,2024-03-14,2023-05-10,something,IN_PROGRESS,"United Bankshares, Inc.",11
+188,FreeCRM,system,2023-10-12,system,2024-04-28,visualize strategic systems,2024-02-25,2023-07-30,something,CLOSED,Cimpress N.V,10
+189,Evil Inc.,system,2024-04-12,system,2023-10-09,morph real-time bandwidth,2024-01-30,2023-08-18,something,DONE,Hudbay Minerals Inc.,3
+190,Evil Inc.,system,2023-07-22,system,2024-04-21,incentivize out-of-the-box vortals,2024-04-14,2023-07-03,something,CLOSED,Cerecor Inc.,10
+191,FreeCRM,system,2023-09-12,system,2023-08-20,optimize dot-com channels,2024-03-07,2023-08-24,something,DONE,"Perma-Pipe International Holdings, Inc.",8
+192,FreeCRM,system,2024-04-16,system,2023-12-12,target viral vortals,2024-04-17,2024-04-16,something,DONE,Genesco Inc.,10
+193,Evil Inc.,system,2024-03-21,system,2023-10-24,optimize magnetic solutions,2024-01-28,2023-12-21,something,TODO,"National Western Life Group, Inc.",7
+194,FreeCRM,system,2023-08-28,system,2023-07-30,whiteboard frictionless systems,2024-04-13,2024-03-29,something,TODO,"Neenah Paper, Inc.",3
+195,FreeCRM,system,2024-01-05,system,2024-03-16,synthesize user-centric architectures,2024-03-30,2023-06-01,something,DONE,Gabelli Utility Trust (The),4
+196,Evil Inc.,system,2023-09-18,system,2023-05-14,unleash next-generation e-commerce,2024-04-29,2024-01-03,something,CLOSED,Charter Financial Corp.,9
+197,Evil Inc.,system,2023-09-05,system,2023-05-23,grow bricks-and-clicks communities,2024-03-15,2023-07-07,something,IN_PROGRESS,"Four Corners Property Trust, Inc.",6
+198,Evil Inc.,system,2024-03-02,system,2024-03-13,syndicate cutting-edge interfaces,2024-03-04,2023-05-21,something,DONE,Apollo Tactical Income Fund Inc.,10
+199,Evil Inc.,system,2023-08-11,system,2023-06-19,iterate real-time communities,2024-04-05,2023-10-23,something,TODO,"The ONE Group Hospitality, Inc.",16
+200,Evil Inc.,system,2024-03-23,system,2023-08-02,streamline collaborative technologies,2024-04-14,2023-08-23,something,TODO,"Key Technology, Inc.",16
