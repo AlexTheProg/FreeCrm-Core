@@ -1,6 +1,7 @@
 package com.axc.persistence.jpa.service;
 
 import com.axc.persistence.domain.Task;
+import com.axc.persistence.domain.charts.TaskLineChart;
 import com.axc.persistence.domain.charts.TaskStatusBarChart;
 import com.axc.persistence.jpa.BaseJpaRepository;
 import com.axc.persistence.jpa.repository.TaskRepository;
@@ -24,5 +25,10 @@ class TaskServiceImpl implements TaskService {
     @Override
     public List<TaskStatusBarChart> findTaskStatusBarChart() {
         return taskRepository.countTaskByStatus();
+    }
+
+    @Override
+    public List<TaskLineChart> findTaskLineChart() {
+        return taskRepository.getTaskDistributionByUser();
     }
 }

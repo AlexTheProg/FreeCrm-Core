@@ -1,6 +1,7 @@
 package com.axc.web.presentation.controllers.task;
 
 import com.axc.persistence.domain.Task;
+import com.axc.persistence.domain.charts.TaskLineChart;
 import com.axc.persistence.domain.charts.TaskStatusBarChart;
 import com.axc.persistence.jpa.service.TaskService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -29,6 +30,11 @@ public class TaskController {
     public ResponseEntity<List<TaskStatusBarChart>> getTaskStatusBarChart() {
         System.out.println(TransactionSynchronizationManager.isCurrentTransactionReadOnly());
         return ResponseEntity.ok(taskService.findTaskStatusBarChart());
+    }
+
+    @GetMapping("/task-distribution-by-user")
+    public ResponseEntity<List<TaskLineChart>> getTaskLineChart() {
+        return ResponseEntity.ok(taskService.findTaskLineChart());
     }
 
     @GetMapping("/all")
