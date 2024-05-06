@@ -1,0 +1,11 @@
+id,tenant_id,created_by,updated_by,created_date,updated_date,city,country,region,street,zip_code,details,name,company_id
+1,Evil Inc.,system,system,2023-06-21,2024-02-10,Licun,China,TZ-02,92260 Fairview Junction,,Some details for the branches,Branch of the company,1
+2,FreeCRM,system,system,2023-08-17,2023-10-27,Port-Gentil,Gabon,US-MI,95 Ilene Way,,Some details for the branches,Branch of the company,2
+3,FreeCRM,system,system,2023-05-14,2023-08-16,Kombapari,Indonesia,ES-CL,2 Jackson Avenue,,Some details for the branches,Branch of the company,3
+4,FreeCRM,system,system,2023-05-29,2023-11-17,Mayuge,Uganda,US-MN,21634 Chive Circle,,Some details for the branches,Branch of the company,4
+5,FreeCRM,system,system,2023-12-04,2024-01-25,Moganshan,China,ID-KI,4 Dayton Center,,Some details for the branches,Branch of the company,5
+6,Evil Inc.,system,system,2023-06-23,2024-04-02,Fenggang,China,ES-V,414 Monterey Point,,Some details for the branches,Branch of the company,6
+7,FreeCRM,system,system,2024-02-01,2024-02-18,Vyshchetarasivka,Ukraine,FI-OL,528 Scoville Street,,Some details for the branches,Branch of the company,7
+8,Evil Inc.,system,system,2023-08-01,2023-12-11,Wenfu,China,DE-BW,8872 Quincy Drive,,Some details for the branches,Branch of the company,8
+9,FreeCRM,system,system,2024-02-10,2023-10-23,Sumberdadi,Indonesia,PH-BUK,1043 Manitowish Trail,,Some details for the branches,Branch of the company,9
+10,FreeCRM,system,system,2023-11-02,2024-03-07,Mae Lan,Thailand,US-AK,9 Hollow Ridge Center,94180,Some details for the branches,Branch of the company,10
