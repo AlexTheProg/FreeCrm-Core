@@ -1,9 +1,6 @@
 spring:
   jpa:
-    properties:
-      hibernate:
-        connection:
-          handling_mode: DELAYED_ACQUISITION_AND_RELEASE_AFTER_TRANSACTION
+    open-in-view: false
     database: postgresql
     show-sql: true
     hibernate:
@@ -20,11 +17,11 @@ master-datasource:
   password: password
   driver-class-name: org.postgresql.Driver
   configuration:
-    pool-name: free-crm
+    pool-name: free-crm-master
 readonly-datasource:
   url: jdbc:postgresql://localhost:5434/free-crm
   username: replicator
   password: replicator_password
   driver-class-name: org.postgresql.Driver
   configuration:
-    pool-name: free-crm
+    pool-name: free-crm-slave

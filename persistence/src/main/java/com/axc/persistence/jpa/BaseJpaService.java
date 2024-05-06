@@ -8,6 +8,7 @@ import org.springframework.data.domain.Persistable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import java.io.Serializable;
 import java.util.List;
@@ -49,6 +50,7 @@ public interface BaseJpaService<T extends Persistable<ID>, ID extends Serializab
         return repository().findAll(pageable);
     }
 
+    @Transactional(readOnly = true)
     default List<T> findAll() {
         return repository().findAll();
     }

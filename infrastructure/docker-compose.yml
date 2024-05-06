@@ -44,14 +44,14 @@ services:
       echo 'Backup done, starting replica...'
       else
       echo 'Data directory is not empty, skipping backup.'
-      fi
+      fi    
       chmod 0700 /var/lib/postgresql/data
       postgres
       "
     depends_on:
       - postgres_primary
     volumes:
-      - "postgres:/var/lib/postgresql/data"
+      - infrastructure_pgdata:/var/lib/postgresql/data
 
   redis:
     container_name: freecrm-redis
@@ -66,4 +66,4 @@ services:
       - "6379"
 
 volumes:
-  postgres:
+  infrastructure_pgdata:

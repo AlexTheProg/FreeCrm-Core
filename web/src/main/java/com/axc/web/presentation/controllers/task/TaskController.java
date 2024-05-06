@@ -1,10 +1,13 @@
 package com.axc.web.presentation.controllers.task;
 
+import com.axc.persistence.domain.Task;
+import com.axc.persistence.domain.charts.TaskStatusBarChart;
 import com.axc.persistence.jpa.service.TaskService;
-import com.axc.web.presentation.dto.TaskDto;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Tag(name = "User", description = "Task entity endpoints")
+@Tag(name = "Tasks", description = "Task entity endpoints")
 @RestController
 @RequestMapping(value = TaskController.API_URI)
 @Validated
@@ -23,7 +26,13 @@ public class TaskController {
     private final TaskService taskService;
 
     @GetMapping()
-    public List<TaskDto> getTasks() {
-        return List.of(new TaskDto(taskService.findAll().getFirst()));
+    public ResponseEntity<List<TaskStatusBarChart>> getTaskStatusBarChart() {
+        System.out.println(TransactionSynchronizationManager.isCurrentTransactionReadOnly());
+        return ResponseEntity.ok(taskService.findTaskStatusBarChart());
+    }
+
+    @GetMapping("/all")
+    public List<Task> getAll() {
+        return taskService.findAll();
     }
 }

@@ -6,12 +6,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
+import org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import javax.sql.DataSource;
-import java.util.HashMap;
-import java.util.Map;
 
 @Configuration
 public class DatasourceConfiguration {
@@ -42,24 +40,12 @@ public class DatasourceConfiguration {
 
     @Bean
     @Primary
-    public AbstractRoutingDataSource routingDataSource(DataSource masterDataSource, DataSource slaveDataSource) {
-        AbstractRoutingDataSource routingDataSource = new AbstractRoutingDataSource() {
-            @Override
-            protected Object determineCurrentLookupKey() {
-                return TransactionSynchronizationManager
-                        .isCurrentTransactionReadOnly() ?
-                        DataSourceType.READ_ONLY :
-                        DataSourceType.READ_WRITE;
-            }
-        };
+    public LazyConnectionDataSourceProxy routingDataSource(DataSource masterDataSource, DataSource slaveDataSource) {
+        var lazyDataSource = new LazyConnectionDataSourceProxy();
 
-        Map<Object, Object> dataSourceMap = new HashMap<>();
-        dataSourceMap.put(DataSourceType.READ_WRITE, masterDataSource);
-        dataSourceMap.put(DataSourceType.READ_ONLY, slaveDataSource);
+        lazyDataSource.setTargetDataSource(masterDataSource);
+        lazyDataSource.setReadOnlyDataSource(slaveDataSource);
 
-        routingDataSource.setTargetDataSources(dataSourceMap);
-        routingDataSource.setDefaultTargetDataSource(masterDataSource);
-
-        return routingDataSource;
+        return lazyDataSource;
     }
 }
