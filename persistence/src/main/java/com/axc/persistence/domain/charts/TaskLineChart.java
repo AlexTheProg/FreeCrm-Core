@@ -1,17 +1,18 @@
 package com.axc.persistence.domain.charts;
 
 import com.axc.persistence.enums.TaskStatus;
-import org.springframework.beans.factory.annotation.Value;
+import lombok.Getter;
 
-public interface TaskLineChart {
-    String getName();
+import java.util.List;
 
-    Long getDone();
+@Getter
+public class TaskLineChart {
+    private TaskStatus status;
+    private List<UserTaskDTO> users;
 
-    Long getTodo();
-
-    @Value("#{target.in_progress}")
-    Long getInProgress();
-
-    Long getClosed();
+    public TaskLineChart(TaskStatus status, List<UserTaskDTO> users) {
+        this.status = status;
+        this.users = users;
+    }
 }
+
