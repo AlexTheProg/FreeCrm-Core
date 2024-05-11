@@ -6,4 +6,5 @@
 
     <include file="classpath:db-changelog/changelogs/initialize-database.xml"/>
     <include file="classpath:db-changelog/changelogs/add-initial-data.xml"/>
+    <include file="classpath:db-changelog/changelogs/add-deal-financial-data.xml"/>
 </databaseChangeLog>

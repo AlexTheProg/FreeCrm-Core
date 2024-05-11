@@ -12,7 +12,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 @SpringBootTest(classes = {WebApplication.class}, webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @ActiveProfiles("test")
-@TestPropertySource("classpath:application.yml")
+@TestPropertySource("classpath:application.yaml")
 @ContextConfiguration(classes = {})
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class AbstractIntegrationTest {

@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    properties:
+      hibernate.format_sql: true
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+  liquibase:
+    enabled: true
+    change-log: "classpath:/db-changelog/changelog-master.xml"

@@ -34,6 +34,7 @@ class TaskServiceImpl implements TaskService {
 
     @Override
     public List<TaskLineChart> findTaskLineChart() {
+        //return taskRepository.getTaskDistributionByUser();
         String jpql = "SELECT t.status, CONCAT(wm.member.firstName, ' ', wm.member.lastName), COUNT(t.id) " +
                 "FROM Task t " +
                 "JOIN t.workspaceMember wm " +

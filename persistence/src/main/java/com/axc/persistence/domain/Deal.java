@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Cache;
 
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,12 +38,20 @@ public class Deal extends AuditedEntity {
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private Branch branch;
 
-
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JoinTable(name = "deal_files", joinColumns = @JoinColumn(name = "deal_id"),
             inverseJoinColumns = @JoinColumn(name = "document_id"))
     private Set<Document> documents = new HashSet<>();
+
+    @Column(name = "budget", columnDefinition = "numeric")
+    private BigDecimal budget;
+
+    @Column(name = "estimated_costs", columnDefinition = "numeric")
+    private BigDecimal estimatedCosts;
+
+    @Column(name = "projected_profits", columnDefinition = "numeric")
+    private BigDecimal projectedProfits;
 
     public void addDocument(Document document) {
         documents.add(document);
