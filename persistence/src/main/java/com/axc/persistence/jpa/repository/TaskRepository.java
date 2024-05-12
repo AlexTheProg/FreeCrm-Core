@@ -1,8 +1,8 @@
 package com.axc.persistence.jpa.repository;
 
 import com.axc.persistence.domain.Task;
-import com.axc.persistence.domain.charts.TaskLineChart;
-import com.axc.persistence.domain.charts.TaskStatusBarChart;
+import com.axc.persistence.domain.charts.tasks.TaskLineChart;
+import com.axc.persistence.domain.charts.tasks.TaskStatusBarChart;
 import com.axc.persistence.jpa.BaseJpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

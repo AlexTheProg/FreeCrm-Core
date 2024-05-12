@@ -10,6 +10,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -44,6 +45,9 @@ public class Workspace extends AuditedEntity {
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @Setter(AccessLevel.PROTECTED)
     private Set<Lead> leads = new HashSet<>();
+
+    @Column(name = "rent", columnDefinition = "numeric")
+    private BigDecimal rent;
 
     public void addMember(WorkspaceMember member) {
         members.add(member);

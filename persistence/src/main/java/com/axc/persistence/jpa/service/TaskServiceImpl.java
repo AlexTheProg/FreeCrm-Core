@@ -1,8 +1,8 @@
 package com.axc.persistence.jpa.service;
 
 import com.axc.persistence.domain.Task;
-import com.axc.persistence.domain.charts.TaskLineChart;
-import com.axc.persistence.domain.charts.TaskStatusBarChart;
+import com.axc.persistence.domain.charts.tasks.TaskLineChart;
+import com.axc.persistence.domain.charts.tasks.TaskStatusBarChart;
 import com.axc.persistence.domain.charts.UserTaskDTO;
 import com.axc.persistence.enums.TaskStatus;
 import com.axc.persistence.jpa.BaseJpaRepository;

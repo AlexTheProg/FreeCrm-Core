@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -44,6 +45,9 @@ public class WorkspaceMember extends AuditedEntity {
     @JoinTable(name = "workspace_member_deals", joinColumns = @JoinColumn(name = "workspace_member_id"),
             inverseJoinColumns = @JoinColumn(name = "deal_id"))
     private Set<Deal> deals = new HashSet<>();
+
+    @Column(name = "salary", columnDefinition = "numeric")
+    private BigDecimal salary;
 
     public void addTask(Task task) {
         tasks.add(task);

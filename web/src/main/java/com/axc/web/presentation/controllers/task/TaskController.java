@@ -1,8 +1,8 @@
 package com.axc.web.presentation.controllers.task;
 
 import com.axc.persistence.domain.Task;
-import com.axc.persistence.domain.charts.TaskLineChart;
-import com.axc.persistence.domain.charts.TaskStatusBarChart;
+import com.axc.persistence.domain.charts.tasks.TaskLineChart;
+import com.axc.persistence.domain.charts.tasks.TaskStatusBarChart;
 import com.axc.persistence.jpa.service.TaskService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

@@ -1,5 +1,6 @@
-package com.axc.persistence.domain.charts;
+package com.axc.persistence.domain.charts.tasks;
 
+import com.axc.persistence.domain.charts.UserTaskDTO;
 import com.axc.persistence.enums.TaskStatus;
 import lombok.Getter;
 
