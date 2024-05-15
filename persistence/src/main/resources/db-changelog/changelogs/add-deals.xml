@@ -1,0 +1,33 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="alex.contu (generated)" id="1715451632023-6">
+        <sql>
+            insert into deals (id, tenant_id, created_by, created_date, updated_date, updated_by, details, name, status, company_id,
+                               workspace_member_id, budget, estimated_costs, projected_profits)
+            values (nextval('seq_task_id'), 'FreeCRM', 'system', now(), now(), 'system', 'Details', 'My first deal', 'PROPOSED', 1, 1, 100000, 45000, 0);
+
+            insert into deals (id, tenant_id, created_by, created_date, updated_date, updated_by, details, name, status, company_id,
+                               workspace_member_id, budget, estimated_costs, projected_profits)
+            values (nextval('seq_task_id'), 'FreeCRM', 'system', now(), now(), 'system', 'Details', 'My first deal', 'PROPOSED', 1, 1, 345678, 300500, 0);
+
+            insert into deals (id, tenant_id, created_by, created_date, updated_date, updated_by, details, name, status, company_id,
+                               workspace_member_id, budget, estimated_costs, projected_profits)
+            values (nextval('seq_task_id'), 'FreeCRM', 'system', now(), now(), 'system', 'Details', 'My first deal', 'PROPOSED', 1, 1, 100000, 45000, 0);
+
+            insert into deals (id, tenant_id, created_by, created_date, updated_date, updated_by, details, name, status, company_id,
+                               workspace_member_id, budget, estimated_costs, projected_profits)
+            values (nextval('seq_task_id'), 'FreeCRM', 'system', now(), now(), 'system', 'Details', 'My first deal', 'PROPOSED', 1, 1, 450000, 350000, 0);
+
+            insert into deals (id, tenant_id, created_by, created_date, updated_date, updated_by, details, name, status, company_id,
+                               workspace_member_id, budget, estimated_costs, projected_profits)
+            values (nextval('seq_task_id'), 'FreeCRM', 'system', now(), now(), 'system', 'Details', 'My first deal', 'PROPOSED', 1, 1, 250000, 150000, 0);
+
+            insert into deals (id, tenant_id, created_by, created_date, updated_date, updated_by, details, name, status, company_id,
+                               workspace_member_id, budget, estimated_costs, projected_profits)
+            values (nextval('seq_task_id'), 'FreeCRM', 'system', now(), now(), 'system', 'Details', 'My first deal', 'PROPOSED', 1, 1, 300000, 250000, 0);
+
+            update deals set projected_profits = budget - deals.estimated_costs;
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

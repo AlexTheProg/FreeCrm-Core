@@ -1,17 +1,13 @@
-x-postgres-common:
-  &postgres-common
-  image: postgres:14-alpine
-  user: postgres
-  restart: always
-  healthcheck:
-    test: 'pg_isready -U user --dbname=free-crm'
-    interval: 10s
-    timeout: 5s
-    retries: 5
-
 services:
   postgres_primary:
-    <<: *postgres-common
+    image: postgres:14-alpine
+    user: postgres
+    restart: always
+    healthcheck:
+      test: 'pg_isready -U user --dbname=free-crm'
+      interval: 10s
+      timeout: 5s
+      retries: 5
     ports:
       - "5433:5432"
     environment:
@@ -28,10 +24,18 @@ services:
       -c max_replication_slots=10 
       -c hot_standby_feedback=on
     volumes:
+      - primary-postgres-data:/var/lib/postgresql/data
       - ./00_init.sql:/docker-entrypoint-initdb.d/00_init.sql
 
   postgres_replica:
-    <<: *postgres-common
+    image: postgres:14-alpine
+    user: postgres
+    restart: always
+    healthcheck:
+      test: 'pg_isready -U replicator --dbname=free-crm'
+      interval: 10s
+      timeout: 5s
+      retries: 5
     ports:
       - "5434:5432"
     environment:
@@ -51,7 +55,8 @@ services:
     depends_on:
       - postgres_primary
     volumes:
-      - infrastructure_pgdata:/var/lib/postgresql/data
+      - standby-postgres-data:/var/lib/postgresql/data
+      - ./create-metabase-role.sql:/docker-entrypoint-initdb.d/create-metabase-role.sql
 
   redis:
     container_name: freecrm-redis
@@ -65,5 +70,56 @@ services:
     expose:
       - "6379"
 
+  minio:
+    container_name: freecrm-minio
+    image: docker.io/bitnami/minio:2022
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    volumes:
+      - 'minio_data:/data'
+    environment:
+      - MINIO_ROOT_USER=your_username
+      - MINIO_ROOT_PASSWORD=your_pasword
+      - MINIO_DEFAULT_BUCKETS=your_bucket_name
+    command: minio server /data
+
+  metabase:
+    image: metabase/metabase:v0.48.5
+    container_name: metabase
+    hostname: metabase
+    volumes:
+      - metabase-data:/metabase-data
+    ports:
+      - 3000:3000
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabaseappdb
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase
+      MB_DB_PASS: mysecretpassword
+      MB_DB_HOST: postgres
+    healthcheck:
+      test: curl --fail -I http://localhost:3000/api/health || exit 1
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  postgres-metabase:
+    image: postgres:latest
+    container_name: postgres
+    hostname: postgres
+    environment:
+      POSTGRES_USER: metabase
+      POSTGRES_DB: metabaseappdb
+      POSTGRES_PASSWORD: mysecretpassword
+
 volumes:
-  infrastructure_pgdata:
+  primary-postgres-data:
+    driver: local
+  standby-postgres-data:
+    driver: local
+  metabase-data:
+    driver: local
+  minio_data:
+    driver: local

@@ -1,0 +1,50 @@
+{
+  "token": "${setup_token}",
+  "user": {
+    "password_confirm": "123asdfgh",
+    "password": "123asdfgh",
+    "site_name": "free-crm",
+    "email": "alexandru.contu99@gmail.com",
+    "last_name": "contu",
+    "first_name": "alexandru"
+  },
+  "database": {
+    "is_on_demand": false,
+    "is_full_sync": false,
+    "is_sample": false,
+    "cache_ttl": null,
+    "refingerprint": false,
+    "auto_run_queries": true,
+    "schedules": {},
+    "details": {
+      "host": "free-crm",
+      "port": 5433,
+      "dbname": "free-crm",
+      "user": "metabase",
+      "password": "metabase",
+      "schema-filter-type": "all",
+      "ssl": false,
+      "tunnel-enabled": false,
+      "advanced-options": false
+    },
+    "name": "FreeCRM Reporting",
+    "engine": "postgres",
+    "database": {
+      "host": "free-crm",
+      "port": 5433,
+      "dbname": "free-crm",
+      "user": "metabase",
+      "password": "metabase",
+      "schema-filter-type": "all",
+      "ssl": false,
+      "tunnel-enabled": false,
+      "advanced-options": false
+    }
+  },
+  "invite": null,
+  "prefs": {
+    "site_name": "FreeCRM Reporting",
+    "site_locale": "en",
+    "allow_tracking": true
+  }
+}
