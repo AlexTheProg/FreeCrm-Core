@@ -9,4 +9,5 @@
     <include file="classpath:db-changelog/changelogs/add-deal-financial-data.xml"/>
     <include file="classpath:db-changelog/changelogs/add-rent-and-salary.xml"/>
     <include file="classpath:db-changelog/changelogs/add-deals.xml"/>
+    <include file="classpath:db-changelog/changelogs/add-metabase-reporting.xml"/>
 </databaseChangeLog>

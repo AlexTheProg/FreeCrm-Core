@@ -15,3 +15,7 @@ spring:
 supabase:
   secretKey: ${SECRET_KEY:}
 
+metabase:
+  site-url: http://localhost:3000
+  secret:key: def81065da2b705d9875fa633be87fea0c5199e01b23973d9506999ba24f8d0b
+
