@@ -24,6 +24,13 @@ public class TenantIdFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        if (request.getRequestURI().contains("/ws")
+        || request.getRequestURI().contains("/app")) {
+            //pass on to other possible filters and do nothing
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         tenantIdentifierResolver.setTenantId(currentUserHolder.getCurrentTenantId());
 
         try {
