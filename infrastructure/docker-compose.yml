@@ -28,6 +28,7 @@ services:
 
   postgres_replica:
     image: postgres:14-alpine
+    user: postgres
     restart: unless-stopped
     healthcheck:
       test: 'pg_isready -U replicator --dbname=free-crm'
@@ -37,9 +38,20 @@ services:
     ports:
       - "5434:5432"
     environment:
-      POSTGRES_USER: replicator
-      POSTGRES_DB: free-crm
-      POSTGRES_PASSWORD: replicator_password
+      PGUSER: replicator
+      PGPASSWORD: replicator_password
+    command: |
+      bash -c "
+      if [ -z \"\$(ls -A /var/lib/postgresql/data)\" ]; then
+      pg_basebackup --pgdata=/var/lib/postgresql/data -R --slot=replication_slot --host=postgres_primary --port=5432
+      echo 'Backup done, starting replica...'
+      else
+      echo 'Data directory is not empty, skipping backup.'
+      fi
+      chown -R postgres:postgres /var/lib/postgresql/data
+      chmod 0700 /var/lib/postgresql/data
+      postgres
+      "
     depends_on:
       - postgres_primary
     volumes:
