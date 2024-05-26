@@ -7,6 +7,9 @@ import org.jetbrains.annotations.Nullable;
 import org.springframework.transaction.annotation.Transactional;
 
 public interface WorkspaceMemberService extends ReferenceJpaService<WorkspaceMember, Long> {
+
+    WorkspaceMember findWithWorkspaceAndOwnerById(Long memberId);
+
     @Override
     @Transactional(readOnly = true)
     default WorkspaceMember createReferenceForId(@Nullable Long id) {

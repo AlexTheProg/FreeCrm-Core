@@ -18,4 +18,9 @@ class WorkspaceMemberServiceImpl implements WorkspaceMemberService {
     public BaseJpaRepository<WorkspaceMember, Long> repository() {
         return workspaceMemberRepository;
     }
+
+    @Override
+    public WorkspaceMember findWithWorkspaceAndOwnerById(Long memberId) {
+        return workspaceMemberRepository.findWithWorkspaceAndOwnerById(memberId);
+    }
 }

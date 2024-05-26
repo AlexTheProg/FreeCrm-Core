@@ -10,6 +10,7 @@ public interface UserService extends ReferenceJpaService<User, Long> {
 
     User findByUsername(String username);
     User findByEmail(String email);
+    void deleteUserById(Long id);
 
     @Override
     @Transactional(readOnly = true)

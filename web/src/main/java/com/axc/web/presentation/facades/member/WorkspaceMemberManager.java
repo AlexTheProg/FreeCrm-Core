@@ -7,6 +7,7 @@ import com.axc.persistence.jpa.service.UserService;
 import com.axc.persistence.jpa.service.WorkspaceMemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Create and/or update {@link com.axc.persistence.domain.WorkspaceMember}
@@ -23,6 +24,7 @@ public class WorkspaceMemberManager {
         this.workspaceMemberService = workspaceMemberService;
     }
 
+    @Transactional
     public User save(Workspace workspace, User user) {
         var workspaceMember = new WorkspaceMember();
         workspaceMember.setMember(user);

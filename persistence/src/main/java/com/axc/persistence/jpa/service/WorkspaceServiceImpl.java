@@ -19,4 +19,9 @@ class WorkspaceServiceImpl implements WorkspaceService {
     public BaseJpaRepository<Workspace, Long> repository() {
         return workspaceRepository;
     }
+
+    @Override
+    public Workspace findByTenantId(String tenantId) {
+        return workspaceRepository.findByTenantId(tenantId);
+    }
 }
